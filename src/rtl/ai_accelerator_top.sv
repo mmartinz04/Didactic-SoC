@@ -28,7 +28,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module tum_ss #(
+module ai_accelerator_top #(
     parameter APB_AW    = 10,
     parameter APB_DW    = 32,
     parameter MAT_DIM   = 16,
@@ -55,8 +55,7 @@ module tum_ss #(
     // Clock and Reset
     //--------------------------------------------------
     input  wire                  clk_in,
-    input  wire                  high_speed_clk,
-    input  wire                  reset_in,
+    input  wire                  reset_int,
 
     //--------------------------------------------------
     // IRQ
@@ -72,24 +71,27 @@ module tum_ss #(
     //--------------------------------------------------
     // PMOD GPIO Port 0
     //--------------------------------------------------
-    input  wire [15:0]            pmod_gpi,
-    output wire [15:0]            pmod_gpo,
-    output wire [15:0]            pmod_gpio_oe
+    input  wire [3:0]            pmod_0_gpi,
+    output wire [3:0]            pmod_0_gpo,
+    output wire [3:0]            pmod_0_gpio_oe,
 
     //--------------------------------------------------
     // PMOD GPIO Port 1
     //--------------------------------------------------
-    //input  wire [3:0]            pmod_1_gpi,
-    //output wire [3:0]            pmod_1_gpo,
-    //output wire [3:0]            pmod_1_gpio_oe
+    input  wire [3:0]            pmod_1_gpi,
+    output wire [3:0]            pmod_1_gpo,
+    output wire [3:0]            pmod_1_gpio_oe
 );
 
     //--------------------------------------------------
     // Unused PMOD Outputs
     //--------------------------------------------------
 
-    assign pmod_gpo     = 16'd0;
-    assign pmod_gpio_oe = 16'd0;
+    assign pmod_0_gpo     = 4'd0;
+    assign pmod_0_gpio_oe = 4'd0;
+
+    assign pmod_1_gpo     = 4'd0;
+    assign pmod_1_gpio_oe = 4'd0;
 
     //--------------------------------------------------
     // APB Interface Internal Signals

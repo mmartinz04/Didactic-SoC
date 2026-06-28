@@ -135,6 +135,15 @@ sources:
     - src/generated/SysCtrl_SS_0.v
     - src/generated/SysCtrl_SS_wrapper_0.v
     - src/generated/Didactic.v
+    - src/rtl/accelerator_control.sv
+    - src/rtl/activation_buffer.sv
+#    - src/rtl/ai_accelerator_top.sv
+    - src/rtl/apb_interface.sv
+    - src/rtl/buffer_controller.sv
+    - src/rtl/MAC_Unit.v
+    - src/rtl/output_buffer.sv
+    - src/rtl/systolic_array.sv
+    - src/rtl/weight_buffer.sv
 
   - target: not(synthesis)
     files:

@@ -86,6 +86,7 @@ module tum_wrapper_0 #(
     wire       i_tum_ss_PENABLE;
     wire [31:0] i_tum_ss_PRDATA;
     wire       i_tum_ss_PREADY;
+    wire [3:0] i_tum_ss_PSTRB;
     wire       i_tum_ss_PSEL;
     wire       i_tum_ss_PSLVERR;
     wire [31:0] i_tum_ss_PWDATA;
@@ -112,6 +113,7 @@ module tum_wrapper_0 #(
     assign i_tum_ss_APB_to_APB_PADDR = PADDR;
     assign i_tum_ss_APB_to_APB_PENABLE = PENABLE;
     assign PRDATA = i_tum_ss_APB_to_APB_PRDATA;
+    assign PSTRB = i_tum_ss_APB_to_APB_PSTRB;
     assign PREADY = i_tum_ss_APB_to_APB_PREADY;
     assign i_tum_ss_APB_to_APB_PSEL = PSEL;
     assign PSLVERR = i_tum_ss_APB_to_APB_PSLVERR;
@@ -134,6 +136,7 @@ module tum_wrapper_0 #(
     assign i_tum_ss_PADDR = i_tum_ss_APB_to_APB_PADDR;
     assign i_tum_ss_PENABLE = i_tum_ss_APB_to_APB_PENABLE;
     assign i_tum_ss_APB_to_APB_PRDATA = i_tum_ss_PRDATA;
+    assign i_tum_ss_APB_to_APB_PSTRB = i_tum_ss_PSTRB;
     assign i_tum_ss_APB_to_APB_PREADY = i_tum_ss_PREADY;
     assign i_tum_ss_PSEL = i_tum_ss_APB_to_APB_PSEL;
     assign i_tum_ss_APB_to_APB_PSLVERR = i_tum_ss_PSLVERR;
@@ -166,17 +169,18 @@ module tum_wrapper_0 #(
         .PWDATA              (i_tum_ss_PWDATA),
         .PWRITE              (i_tum_ss_PWRITE),
         .PRDATA              (i_tum_ss_PRDATA),
+        .PSTRB               (i_tum_ss_PSTRB),   
         .PREADY              (i_tum_ss_PREADY),
         .PSLVERR             (i_tum_ss_PSLVERR),
         // Interface: Clock
         .clk_in              (i_tum_ss_clk_in),
         // Interface: IRQ
-        .irq_3               (i_tum_ss_irq_3),
+        .irq_4               (i_tum_ss_irq_3),
         // Interface: Reset
-        .reset_int           (i_tum_ss_reset_int),
+        .reset_in            (i_tum_ss_reset_int),
         // Interface: SS_CTRL
-        .irq_en_3            (i_tum_ss_irq_en_3),
-        .ss_ctrl_3           (i_tum_ss_ss_ctrl_3),
+        .irq_en_4            (i_tum_ss_irq_en_3),
+        .ss_ctrl_4           (i_tum_ss_ss_ctrl_3),
         // Interface: high_speed_clk
         .high_speed_clk      (i_tum_ss_high_speed_clk),
         // Interface: pmod_gpio

@@ -15,7 +15,7 @@
 # Common shell variables
 SHELL=bash
 BUILD_DIR ?= $(realpath $(CURDIR))/build/
-TEST ?= blink
+TEST ?= set_row_a
 
 
 # Fetch submodule revisions and 
