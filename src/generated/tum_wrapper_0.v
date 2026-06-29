@@ -113,10 +113,11 @@ module tum_wrapper_0 #(
     assign i_tum_ss_APB_to_APB_PADDR = PADDR;
     assign i_tum_ss_APB_to_APB_PENABLE = PENABLE;
     assign PRDATA = i_tum_ss_APB_to_APB_PRDATA;
-    assign PSTRB = i_tum_ss_APB_to_APB_PSTRB;
+    //assign PSTRB = i_tum_ss_APB_to_APB_PSTRB;
     assign PREADY = i_tum_ss_APB_to_APB_PREADY;
     assign i_tum_ss_APB_to_APB_PSEL = PSEL;
     assign PSLVERR = i_tum_ss_APB_to_APB_PSLVERR;
+    assign i_tum_ss_APB_to_APB_PSTRB = PSTRB;
     assign i_tum_ss_APB_to_APB_PWDATA = PWDATA;
     assign i_tum_ss_APB_to_APB_PWRITE = PWRITE;
     assign ss_cg_clk_in_to_Clock_clk = clk_in;
@@ -136,11 +137,12 @@ module tum_wrapper_0 #(
     assign i_tum_ss_PADDR = i_tum_ss_APB_to_APB_PADDR;
     assign i_tum_ss_PENABLE = i_tum_ss_APB_to_APB_PENABLE;
     assign i_tum_ss_APB_to_APB_PRDATA = i_tum_ss_PRDATA;
-    assign i_tum_ss_APB_to_APB_PSTRB = i_tum_ss_PSTRB;
+    //assign i_tum_ss_APB_to_APB_PSTRB = i_tum_ss_PSTRB;
     assign i_tum_ss_APB_to_APB_PREADY = i_tum_ss_PREADY;
     assign i_tum_ss_PSEL = i_tum_ss_APB_to_APB_PSEL;
     assign i_tum_ss_APB_to_APB_PSLVERR = i_tum_ss_PSLVERR;
     assign i_tum_ss_PWDATA = i_tum_ss_APB_to_APB_PWDATA;
+    assign i_tum_ss_PSTRB = i_tum_ss_APB_to_APB_PSTRB;
     assign i_tum_ss_PWRITE = i_tum_ss_APB_to_APB_PWRITE;
     assign i_tum_ss_clk_in = ss_cg_clk_out_to_i_tum_ss_Clock_clk;
     assign i_tum_ss_high_speed_clk = ss_high_speed_cg_clk_out_to_i_tum_ss_high_speed_clk_clk;
@@ -177,7 +179,7 @@ module tum_wrapper_0 #(
         // Interface: IRQ
         .irq_4               (i_tum_ss_irq_3),
         // Interface: Reset
-        .reset_in            (i_tum_ss_reset_int),
+        .reset_int            (i_tum_ss_reset_int),
         // Interface: SS_CTRL
         .irq_en_4            (i_tum_ss_irq_en_3),
         .ss_ctrl_4           (i_tum_ss_ss_ctrl_3),

@@ -33,6 +33,7 @@ module tech_cg
     end
 
     assign clk_out = clk & en_latched;
+    //assign clk_out = clk;
 
   `endif
 

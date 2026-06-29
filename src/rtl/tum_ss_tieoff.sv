@@ -31,7 +31,7 @@
 module tum_ss #(
     parameter APB_AW    = 10,
     parameter APB_DW    = 32,
-    parameter MAT_DIM   = 16,
+    parameter MAT_DIM   = 8,
     parameter DATA_W_A  = 8,
     parameter DATA_W_B  = 8,
     parameter DATA_W_C  = 32,
@@ -56,7 +56,7 @@ module tum_ss #(
     //--------------------------------------------------
     input  wire                  clk_in,
     input  wire                  high_speed_clk,
-    input  wire                  reset_in,
+    input  wire                  reset_int,
 
     //--------------------------------------------------
     // IRQ
