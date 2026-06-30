@@ -169,8 +169,8 @@ module apb_interface #(
     // APB Write Logic - Similar to the provided student_ss_example.sv 
     //--------------------------------------------------
     
-    always @(posedge clk_in or posedge reset_int) begin
-        if(reset_int) begin
+    always @(posedge clk_in or negedge reset_int) begin
+        if(!reset_int) begin
             PREADY <= 1'b0;
             PSLVERR <= 1'b0;
     

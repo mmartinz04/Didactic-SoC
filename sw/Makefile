@@ -6,7 +6,7 @@
 #   -Antti Nurmi
 ###
 
-TESTCASE ?= set_row_a
+TESTCASE ?= acc_test_1
 START_TIME=`date +%F_%H:%M`
 SHELL = bash
 BUILD_DIR ?= ../build

@@ -144,8 +144,8 @@ module accelerator_control #(
     // State Register
     //--------------------------------------------------
 
-    always @(posedge clk_in or posedge reset_int) begin
-        if (reset_int) begin
+    always @(posedge clk_in or negedge reset_int) begin
+        if (!reset_int) begin
             state_reg       <= S_IDLE;
             active_buf      <= 1'b0;
             last_result_buf <= 1'b0;

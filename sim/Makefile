@@ -88,7 +88,7 @@ compile_didactic:
 	$(VLOG_OPTS) $(SIM_FLIST) -l $(BUILD_DIR)/logs/compile/$(START_TIME)_didactic.log
 
 SANITY_CHECK ?= 0
-TESTCASE ?= set_row_a
+TESTCASE ?= acc_test_1
 GUI ?= "-gui"
 elaborate: library_mapping
 	cd $(BUILD_DIR)

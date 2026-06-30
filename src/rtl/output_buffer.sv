@@ -130,8 +130,8 @@ module output_buffer #(
     // Store Logic
     //--------------------------------------------------
 
-    always @(posedge clk_in or posedge reset_int) begin
-        if (reset_int) begin
+    always @(posedge clk_in or negedge reset_int) begin
+        if (!reset_int) begin
             store_t    <= {T_W{1'b0}};
             storing    <= 1'b0;
             store_done <= 1'b0;

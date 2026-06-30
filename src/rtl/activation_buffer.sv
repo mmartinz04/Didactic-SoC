@@ -117,8 +117,8 @@ module activation_buffer #(
     //
     //--------------------------------------------------
 
-    always @(posedge clk_in or posedge reset_int) begin
-        if (reset_int) begin
+    always @(posedge clk_in or negedge reset_int) begin
+        if (!reset_int) begin
             for (clear_idx = 0; clear_idx < NUM_ELEMENTS; clear_idx = clear_idx + 1) begin
                 mem[clear_idx] <= {DATA_W{1'b0}};
             end
@@ -146,8 +146,8 @@ module activation_buffer #(
     //
     //--------------------------------------------------
 
-    always @(posedge clk_in or posedge reset_int) begin
-        if (reset_int) begin
+    always @(posedge clk_in or negedge reset_int) begin
+        if (!reset_int) begin
             streaming    <= 1'b0;
             stream_cycle <= {CYCLE_W{1'b0}};
             stream_done  <= 1'b0;

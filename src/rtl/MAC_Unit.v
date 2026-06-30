@@ -43,8 +43,8 @@ module MAC_Unit#(
     // Pipeline Logic
     // ------------------------------------------------------------------------------------ //
     
-    always @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always @(posedge clk or negedge rst) begin
+        if (!rst) begin
             b_reg <= 0;
         end
         else begin
@@ -53,8 +53,8 @@ module MAC_Unit#(
         end
     end
     
-    always @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always @(posedge clk or negedge rst) begin
+        if (!rst) begin
     
             out_a <= 0;
             out_c <= 0;
