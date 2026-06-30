@@ -104,8 +104,15 @@ module output_buffer #(
     reg [T_W-1:0] store_t;
     reg           storing;
     
+    reg store_enable_q;
+    reg store_armed;
+    
+    wire store_enable_rise;
     wire capture_now;
-    assign capture_now = |c_valid && (storing || (store_enable && !storing));
+    
+    assign store_enable_rise = store_enable && !store_enable_q;
+    
+    assign capture_now = |c_valid && (storing || store_armed || store_enable_rise);
     
     integer i;
     integer clear_idx;
@@ -129,70 +136,91 @@ module output_buffer #(
     //--------------------------------------------------
     // Store Logic
     //--------------------------------------------------
-
+    
     always @(posedge clk_in or negedge reset_int) begin
-        if (!reset_int) begin
-            store_t    <= {T_W{1'b0}};
-            storing    <= 1'b0;
-            store_done <= 1'b0;
-            
-            for (clear_idx = 0; clear_idx < NUM_ELEMENTS; clear_idx = clear_idx + 1) begin
-                mem[clear_idx] <= {DATA_W{1'b0}};
-            end
+    if (!reset_int) begin
+        store_t        <= {T_W{1'b0}};
+        storing        <= 1'b0;
+        store_done     <= 1'b0;
+        store_enable_q <= 1'b0;
+        store_armed    <= 1'b0;
+
+        for (clear_idx = 0; clear_idx < NUM_ELEMENTS; clear_idx = clear_idx + 1) begin
+            mem[clear_idx] <= {DATA_W{1'b0}};
         end
-        else begin
-            store_done <= 1'b0;
-        
-            //--------------------------------------------------
-            // Capture on the first valid c_valid cycle as well.
-            //--------------------------------------------------
-        
-            if (capture_now) begin
+    end
+    else begin
+        store_enable_q <= store_enable;
+        store_done     <= 1'b0;
 
-                if (!storing) begin
-                    storing <= 1'b1;
-                    store_t <= {T_W{1'b0}};
-                end
-            
-                for (i = 0; i < MAT_DIM; i = i + 1) begin
-                    if (c_valid[i]) begin
-                        // Array-output i is result COLUMN j; the anti-diagonal
-                        // index (store_t - i) is result ROW. Store C[row][col]
-                        // = C[store_t - i][i]. (This transposes the placement to
-                        // match the corrected A*B activation feed.)
-                        if ((i < c_cols) &&
-                            (store_t >= i) &&
-                            ((store_t - i) < c_rows)) begin
+        //--------------------------------------------------
+        // Arm once per store_enable rising edge.
+        //
+        // If store_enable stays high after store_done, the
+        // remaining physical c_valid tail must not restart
+        // another store pass.
+        //--------------------------------------------------
 
-                            mem[((store_t - i) * MAT_DIM) + i] <= c_in[i];
+        if (!store_enable) begin
+            store_armed <= 1'b0;
+        end
+        else if (store_enable_rise) begin
+            store_armed <= 1'b1;
+        end
 
-                        end
+        //--------------------------------------------------
+        // Capture on valid systolic-array output.
+        //--------------------------------------------------
+
+        if (capture_now) begin
+
+            if (!storing) begin
+                storing     <= 1'b1;
+                store_armed <= 1'b0;
+                store_t     <= {T_W{1'b0}};
+            end
+
+            for (i = 0; i < MAT_DIM; i = i + 1) begin
+                if (c_valid[i]) begin
+                    // Array-output i is result COLUMN i.
+                    // The anti-diagonal index (store_t - i)
+                    // is result ROW.
+                    if ((i < c_cols) &&
+                        (store_t >= i) &&
+                        ((store_t - i) < c_rows)) begin
+
+                        mem[((store_t - i) * MAT_DIM) + i] <= c_in[i];
+
                     end
                 end
-            
-                if (store_t < (c_rows + c_cols - 2)) begin
-                    store_t <= store_t + 1'b1;
-                end
-                else begin
-                    storing    <= 1'b0;
-                    store_done <= 1'b1;
-                    store_t    <= {T_W{1'b0}};
-                end
-            
             end
-            else if (storing && (store_t >= (c_rows + c_cols - 2))) begin
-            
-                //--------------------------------------------------
-                // Safety finish:
-                // If valid disappeared after the final anti-diagonal
-                // was reached, still complete the store operation.
-                //--------------------------------------------------
-            
-                storing    <= 1'b0;
-                store_done <= 1'b1;
-                store_t    <= {T_W{1'b0}};
-            
-            end 
-        end        
+
+            if (store_t < (c_rows + c_cols - 2)) begin
+                store_t <= store_t + 1'b1;
+            end
+            else begin
+                storing     <= 1'b0;
+                store_armed <= 1'b0;
+                store_done  <= 1'b1;
+                store_t     <= {T_W{1'b0}};
+            end
+
+        end
+        else if (storing && (store_t >= (c_rows + c_cols - 2))) begin
+
+            //--------------------------------------------------
+            // Safety finish:
+            // If valid disappeared after the final anti-diagonal
+            // was reached, still complete the store operation.
+            //--------------------------------------------------
+
+            storing     <= 1'b0;
+            store_armed <= 1'b0;
+            store_done  <= 1'b1;
+            store_t     <= {T_W{1'b0}};
+
+        end
     end
+end
+    
 endmodule
