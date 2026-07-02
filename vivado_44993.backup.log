@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jul  2 12:31:37 2026
+# Process ID: 44993
+# Current directory: /nas/ei/home/ge87dix/Edu4Chip_V2/Didactic-SoC
+# Command line: vivado
+# Log file: /nas/ei/home/ge87dix/Edu4Chip_V2/Didactic-SoC/vivado.log
+# Journal file: /nas/ei/home/ge87dix/Edu4Chip_V2/Didactic-SoC/vivado.jou
+# Running On        :linux11.clients.eikon.tum.de
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.4 LTS
+# Processor Detail  :AMD Ryzen 5 PRO 8500G w/ Radeon 740M Graphics
+# CPU Frequency     :2974.968 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :32738 MB
+# Swap memory       :1073 MB
+# Total Virtual     :33812 MB
+# Available Virtual :29993 MB
+#-----------------------------------------------------------
+start_gui
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+xterm: symbol lookup error: /lib/x86_64-linux-gnu/libfontconfig.so.1: undefined symbol: FT_Done_MM_Var
+ERROR: [Common 17-1374] Display test failed. Please check DISPLAY environment variable and X server permissions for remote display.

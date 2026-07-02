@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jul  2 17:27:22 2026
+# Process ID: 32645
+# Current directory: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC
+# Command line: vivado
+# Log file: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vivado.log
+# Journal file: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vivado.jou
+# Running On        :linux10.clients.eikon.tum.de
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.4 LTS
+# Processor Detail  :AMD Ryzen 5 PRO 8500G w/ Radeon 740M Graphics
+# CPU Frequency     :2666.634 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :32738 MB
+# Swap memory       :1073 MB
+# Total Virtual     :33812 MB
+# Available Virtual :30694 MB
+#-----------------------------------------------------------
+start_gui
+open_project /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/build/fpga/z1/didactic-z1.xpr
+add_files -norecurse /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv

@@ -1,0 +1,567 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Jul  2 18:09:19 2026
+# Process ID: 63834
+# Current directory: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/fpga
+# Command line: vivado -mode batch -notrace -source ../fpga/scripts/run_xilinx.tcl
+# Log file: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/fpga/vivado.log
+# Journal file: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/fpga/vivado.jou
+# Running On        :linux10.clients.eikon.tum.de
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.4 LTS
+# Processor Detail  :AMD Ryzen 5 PRO 8500G w/ Radeon 740M Graphics
+# CPU Frequency     :3305.186 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :32738 MB
+# Swap memory       :1073 MB
+# Total Virtual     :33812 MB
+# Available Virtual :30322 MB
+#-----------------------------------------------------------
+source ../fpga/scripts/run_xilinx.tcl -notrace
+update_compile_order: Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1474.699 ; gain = 18.605 ; free physical = 23903 ; free virtual = 28409
+Command: synth_design -rtl -name rtl_1 -sfcu
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: DidacticZ1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 64161
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2242.914 ; gain = 412.715 ; free physical = 22902 ; free virtual = 27407
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11067] parameter 'ADDR_W' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:367]
+WARNING: [Synth 8-11067] parameter 'BUS_SIZE' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:368]
+WARNING: [Synth 8-11067] parameter 'BUS_BYTES' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:369]
+WARNING: [Synth 8-11067] parameter 'BUS_W' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:370]
+WARNING: [Synth 8-11067] parameter 'IC_SIZE_BYTES' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:371]
+WARNING: [Synth 8-11067] parameter 'IC_NUM_WAYS' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:372]
+WARNING: [Synth 8-11067] parameter 'IC_LINE_SIZE' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:373]
+WARNING: [Synth 8-11067] parameter 'IC_LINE_BYTES' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:374]
+WARNING: [Synth 8-11067] parameter 'IC_LINE_W' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:375]
+WARNING: [Synth 8-11067] parameter 'IC_NUM_LINES' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:376]
+WARNING: [Synth 8-11067] parameter 'IC_LINE_BEATS' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:377]
+WARNING: [Synth 8-11067] parameter 'IC_LINE_BEATS_W' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:378]
+WARNING: [Synth 8-11067] parameter 'IC_INDEX_W' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:379]
+WARNING: [Synth 8-11067] parameter 'IC_INDEX_HI' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:380]
+WARNING: [Synth 8-11067] parameter 'IC_TAG_SIZE' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:381]
+WARNING: [Synth 8-11067] parameter 'IC_OUTPUT_BEATS' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:382]
+WARNING: [Synth 8-11067] parameter 'SCRAMBLE_KEY_W' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:384]
+WARNING: [Synth 8-11067] parameter 'SCRAMBLE_NONCE_W' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:385]
+WARNING: [Synth 8-11067] parameter 'PMP_MAX_REGIONS' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:388]
+WARNING: [Synth 8-11067] parameter 'PMP_CFG_W' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:389]
+WARNING: [Synth 8-11067] parameter 'PMP_I' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:392]
+WARNING: [Synth 8-11067] parameter 'PMP_I2' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:393]
+WARNING: [Synth 8-11067] parameter 'PMP_D' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:394]
+WARNING: [Synth 8-11067] parameter 'CSR_OFF_PMP_CFG' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:594]
+WARNING: [Synth 8-11067] parameter 'CSR_OFF_PMP_ADDR' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:595]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_MIE_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:598]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_MPIE_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:599]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_MPP_BIT_LOW' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:600]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_MPP_BIT_HIGH' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:601]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_MPRV_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:602]
+WARNING: [Synth 8-11067] parameter 'CSR_MSTATUS_TW_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:603]
+WARNING: [Synth 8-11067] parameter 'CSR_MISA_MXL' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:606]
+WARNING: [Synth 8-11067] parameter 'CSR_MSIX_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:609]
+WARNING: [Synth 8-11067] parameter 'CSR_MTIX_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:610]
+WARNING: [Synth 8-11067] parameter 'CSR_MEIX_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:611]
+WARNING: [Synth 8-11067] parameter 'CSR_MFIX_BIT_LOW' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:612]
+WARNING: [Synth 8-11067] parameter 'CSR_MFIX_BIT_HIGH' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:613]
+WARNING: [Synth 8-11067] parameter 'CSR_MSECCFG_MML_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:616]
+WARNING: [Synth 8-11067] parameter 'CSR_MSECCFG_MMWP_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:617]
+WARNING: [Synth 8-11067] parameter 'CSR_MSECCFG_RLB_BIT' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:618]
+WARNING: [Synth 8-11067] parameter 'LfsrWidth' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:633]
+WARNING: [Synth 8-11067] parameter 'RndCnstLfsrSeedDefault' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:636]
+WARNING: [Synth 8-11067] parameter 'RndCnstLfsrPermDefault' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:637]
+WARNING: [Synth 8-11067] parameter 'RndCnstIbexKeyDefault' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:640]
+WARNING: [Synth 8-11067] parameter 'RndCnstIbexNonceDefault' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:642]
+WARNING: [Synth 8-11067] parameter 'IbexMuBiWidth' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:647]
+WARNING: [Synth 8-11067] parameter 'IbexMuBiOn' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:654]
+WARNING: [Synth 8-11067] parameter 'IbexMuBiOff' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:655]
+WARNING: [Synth 8-11067] parameter 'PmpCfgRst' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:664]
+WARNING: [Synth 8-11067] parameter 'PmpAddrRst' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:686]
+WARNING: [Synth 8-11067] parameter 'PmpMseccfgRst' declared inside package 'ibex_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/rtl/ibex_pkg.sv:705]
+WARNING: [Synth 8-11067] parameter 'RAM_1P_CFG_DEFAULT' declared inside package 'prim_ram_1p_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1p_pkg.sv:18]
+WARNING: [Synth 8-11067] parameter 'Secded2216ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:81]
+WARNING: [Synth 8-11067] parameter 'Secded2216ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:82]
+WARNING: [Synth 8-11067] parameter 'Secded2822ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:90]
+WARNING: [Synth 8-11067] parameter 'Secded2822ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:91]
+WARNING: [Synth 8-11067] parameter 'Secded3932ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:99]
+WARNING: [Synth 8-11067] parameter 'Secded3932ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:100]
+WARNING: [Synth 8-11067] parameter 'Secded6457ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:108]
+WARNING: [Synth 8-11067] parameter 'Secded6457ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:109]
+WARNING: [Synth 8-11067] parameter 'Secded7264ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:117]
+WARNING: [Synth 8-11067] parameter 'Secded7264ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:118]
+WARNING: [Synth 8-11067] parameter 'SecdedHamming2216ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:126]
+WARNING: [Synth 8-11067] parameter 'SecdedHamming2216ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:127]
+WARNING: [Synth 8-11067] parameter 'SecdedHamming3932ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:135]
+WARNING: [Synth 8-11067] parameter 'SecdedHamming3932ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:136]
+WARNING: [Synth 8-11067] parameter 'SecdedHamming7264ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:144]
+WARNING: [Synth 8-11067] parameter 'SecdedHamming7264ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:145]
+WARNING: [Synth 8-11067] parameter 'SecdedHamming7668ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:153]
+WARNING: [Synth 8-11067] parameter 'SecdedHamming7668ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:154]
+WARNING: [Synth 8-11067] parameter 'SecdedInv2216ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:162]
+WARNING: [Synth 8-11067] parameter 'SecdedInv2216ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:163]
+WARNING: [Synth 8-11067] parameter 'SecdedInv2822ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:171]
+WARNING: [Synth 8-11067] parameter 'SecdedInv2822ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:172]
+WARNING: [Synth 8-11067] parameter 'SecdedInv3932ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:180]
+WARNING: [Synth 8-11067] parameter 'SecdedInv3932ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:181]
+WARNING: [Synth 8-11067] parameter 'SecdedInv6457ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:189]
+WARNING: [Synth 8-11067] parameter 'SecdedInv6457ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:190]
+WARNING: [Synth 8-11067] parameter 'SecdedInv7264ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:198]
+WARNING: [Synth 8-11067] parameter 'SecdedInv7264ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:199]
+WARNING: [Synth 8-11067] parameter 'SecdedInvHamming2216ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:207]
+WARNING: [Synth 8-11067] parameter 'SecdedInvHamming2216ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:208]
+WARNING: [Synth 8-11067] parameter 'SecdedInvHamming3932ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:216]
+WARNING: [Synth 8-11067] parameter 'SecdedInvHamming3932ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:217]
+WARNING: [Synth 8-11067] parameter 'SecdedInvHamming7264ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:225]
+WARNING: [Synth 8-11067] parameter 'SecdedInvHamming7264ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:226]
+WARNING: [Synth 8-11067] parameter 'SecdedInvHamming7668ZeroEcc' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:234]
+WARNING: [Synth 8-11067] parameter 'SecdedInvHamming7668ZeroWord' declared inside package 'prim_secded_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv:235]
+INFO: [Synth 8-11241] undeclared symbol 'i_subsystem_PSTRB', assumed default net type 'wire' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_0.v:132]
+WARNING: [Synth 8-9661] initial value of parameter 'NUM_INPUTS' is omitted [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/clk_mux_glitch_free.sv:257]
+INFO: [Synth 8-11241] undeclared symbol 'empty', assumed default net type 'wire' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/id_queue.sv:193]
+INFO: [Synth 8-11241] undeclared symbol 'w_b_fifo_valid', assumed default net type 'wire' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/axi-aae2d6c181d6f97b/src/axi_lite_lfsr.sv:109]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'mem_to_banks' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/axi-aae2d6c181d6f97b/src/axi_to_mem.sv:758]
+INFO: [Synth 8-9937] previous definition of design element 'mem_to_banks' is here [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/mem_to_banks.sv:120]
+WARNING: [Synth 8-11065] parameter 'AxiXbarIdWidth' becomes localparam in 'axi_xp' with formal parameter declaration list [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/axi-aae2d6c181d6f97b/src/axi_xp.sv:102]
+WARNING: [Synth 8-11067] parameter 'PRINCE_SBOX4' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:23]
+WARNING: [Synth 8-11067] parameter 'PRINCE_SBOX4_INV' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:28]
+WARNING: [Synth 8-11067] parameter 'PRINCE_SHIFT_ROWS64' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:33]
+WARNING: [Synth 8-11067] parameter 'PRINCE_SHIFT_ROWS64_INV' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:38]
+WARNING: [Synth 8-11067] parameter 'PRINCE_ROUND_CONST' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:44]
+WARNING: [Synth 8-11067] parameter 'PRINCE_ALPHA_CONST' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:58]
+WARNING: [Synth 8-11067] parameter 'PRINCE_SHIFT_ROWS_CONST0' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:61]
+WARNING: [Synth 8-11067] parameter 'PRINCE_SHIFT_ROWS_CONST1' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:62]
+WARNING: [Synth 8-11067] parameter 'PRINCE_SHIFT_ROWS_CONST2' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:63]
+WARNING: [Synth 8-11067] parameter 'PRINCE_SHIFT_ROWS_CONST3' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:64]
+WARNING: [Synth 8-11067] parameter 'PRESENT_SBOX4' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:141]
+WARNING: [Synth 8-11067] parameter 'PRESENT_SBOX4_INV' declared inside package 'prim_cipher_pkg' shall be treated as localparam [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv:146]
+INFO: [Common 17-14] Message 'Synth 8-11067' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6157] synthesizing module 'DidacticZ1' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/fpga/rtl/DidacticZ1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Pll' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/fpga/rtl/DidacticZ1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [/nfs/tools/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:73643]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [/nfs/tools/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:73643]
+INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [/nfs/tools/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:114750]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 33 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE bound to: 33 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'PLLE2_ADV' (0#1) [/nfs/tools/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:114750]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/nfs/tools/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/nfs/tools/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'Pll' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/fpga/rtl/DidacticZ1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'Didactic' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/Didactic.v:20]
+INFO: [Synth 8-6157] synthesizing module 'analog_wrapper_0' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/analog_wrapper_0.v:13]
+	Parameter APB_DW bound to: 32 - type: integer 
+	Parameter APB_AW bound to: 32 - type: integer 
+	Parameter NUM_GPIO bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'analog_wrapper_0' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/analog_wrapper_0.v:13]
+INFO: [Synth 8-6157] synthesizing module 'obi_icn_ss' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/obi_icn_ss.sv:13]
+	Parameter APB_AW bound to: 32 - type: integer 
+	Parameter APB_DW bound to: 32 - type: integer 
+	Parameter OBI_AW bound to: 32 - type: integer 
+	Parameter OBI_CHKW bound to: 1 - type: integer 
+	Parameter OBI_DW bound to: 32 - type: integer 
+	Parameter OBI_IDW bound to: 1 - type: integer 
+	Parameter OBI_USERW bound to: 1 - type: integer 
+	Parameter SS_CTRL_W bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'OBI_BUS' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'OBI_BUS' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_intf.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'APB' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'APB' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'APB' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'APB' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'APB' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'APB' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'APB' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'APB' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'APB' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'APB' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'APB' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'APB' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'APB' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'APB' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'APB' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'APB' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb-e4460f86c75afc6a/src/apb_intf.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'obi_cut_intf' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/obi_cut_intf.sv:16]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'obi_cut' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_cut.sv:7]
+	Parameter ObiCfg[UseRReady] bound to: 1'b0 
+	Parameter ObiCfg[CombGnt] bound to: 1'b0 
+	Parameter ObiCfg[AddrWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter ObiCfg[DataWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter ObiCfg[IdWidth] bound to: 32'b00000000000000000000000000000001 
+	Parameter ObiCfg[Integrity] bound to: 1'b0 
+	Parameter ObiCfg[BeFull] bound to: 1'b1 
+	Parameter ObiCfg[OptionalCfg][UseAtop] bound to: 1'b0 
+	Parameter ObiCfg[OptionalCfg][UseMemtype] bound to: 1'b0 
+	Parameter ObiCfg[OptionalCfg][UseProt] bound to: 1'b0 
+	Parameter ObiCfg[OptionalCfg][UseDbg] bound to: 1'b0 
+	Parameter ObiCfg[OptionalCfg][AUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter ObiCfg[OptionalCfg][WUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter ObiCfg[OptionalCfg][RUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter ObiCfg[OptionalCfg][MidWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter ObiCfg[OptionalCfg][AChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter ObiCfg[OptionalCfg][RChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter Bypass bound to: 1'b1 
+	Parameter BypassReq bound to: 1'b1 
+	Parameter BypassRsp bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'spill_register' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'spill_register_flushable' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/spill_register_flushable.sv:18]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register_flushable' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/spill_register_flushable.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'spill_register' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/spill_register.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'spill_register__parameterized0' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/spill_register.sv:17]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'spill_register_flushable__parameterized0' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/spill_register_flushable.sv:18]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'spill_register_flushable__parameterized0' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/spill_register_flushable.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'spill_register__parameterized0' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/spill_register.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'obi_cut' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_cut.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'obi_cut_intf' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/obi_cut_intf.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'obi_cut_intf__parameterized0' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/obi_cut_intf.sv:16]
+	Parameter Bypass bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'obi_cut_intf__parameterized0' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/obi_cut_intf.sv:16]
+INFO: [Synth 8-6157] synthesizing module 'obi_to_apb_intf' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/obi_to_apb_intf.sv:12]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/obi_to_apb_intf.sv:46]
+INFO: [Synth 8-6155] done synthesizing module 'obi_to_apb_intf' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/obi_to_apb_intf.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'obi_xbar_intf' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_xbar.sv:161]
+	Parameter NumSbrPorts bound to: 2 - type: integer 
+	Parameter NumMgrPorts bound to: 8 - type: integer 
+	Parameter NumMaxTrans bound to: 32'b00000000000000000000000000000001 
+	Parameter NumAddrRules bound to: 8 - type: integer 
+	Parameter UseIdForRouting bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'obi_xbar' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_xbar.sv:8]
+	Parameter SbrPortObiCfg[UseRReady] bound to: 1'b0 
+	Parameter SbrPortObiCfg[CombGnt] bound to: 1'b0 
+	Parameter SbrPortObiCfg[AddrWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter SbrPortObiCfg[DataWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter SbrPortObiCfg[IdWidth] bound to: 32'b00000000000000000000000000000001 
+	Parameter SbrPortObiCfg[Integrity] bound to: 1'b0 
+	Parameter SbrPortObiCfg[BeFull] bound to: 1'b1 
+	Parameter SbrPortObiCfg[OptionalCfg][UseAtop] bound to: 1'b0 
+	Parameter SbrPortObiCfg[OptionalCfg][UseMemtype] bound to: 1'b0 
+	Parameter SbrPortObiCfg[OptionalCfg][UseProt] bound to: 1'b0 
+	Parameter SbrPortObiCfg[OptionalCfg][UseDbg] bound to: 1'b0 
+	Parameter SbrPortObiCfg[OptionalCfg][AUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter SbrPortObiCfg[OptionalCfg][WUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter SbrPortObiCfg[OptionalCfg][RUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter SbrPortObiCfg[OptionalCfg][MidWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter SbrPortObiCfg[OptionalCfg][AChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter SbrPortObiCfg[OptionalCfg][RChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[UseRReady] bound to: 1'b0 
+	Parameter MgrPortObiCfg[CombGnt] bound to: 1'b0 
+	Parameter MgrPortObiCfg[AddrWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter MgrPortObiCfg[DataWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter MgrPortObiCfg[IdWidth] bound to: 32'b00000000000000000000000000000001 
+	Parameter MgrPortObiCfg[Integrity] bound to: 1'b0 
+	Parameter MgrPortObiCfg[BeFull] bound to: 1'b1 
+	Parameter MgrPortObiCfg[OptionalCfg][UseAtop] bound to: 1'b0 
+	Parameter MgrPortObiCfg[OptionalCfg][UseMemtype] bound to: 1'b0 
+	Parameter MgrPortObiCfg[OptionalCfg][UseProt] bound to: 1'b0 
+	Parameter MgrPortObiCfg[OptionalCfg][UseDbg] bound to: 1'b0 
+	Parameter MgrPortObiCfg[OptionalCfg][AUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[OptionalCfg][WUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[OptionalCfg][RUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[OptionalCfg][MidWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[OptionalCfg][AChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[OptionalCfg][RChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter NumSbrPorts bound to: 2 - type: integer 
+	Parameter NumMgrPorts bound to: 8 - type: integer 
+	Parameter NumMaxTrans bound to: 32'b00000000000000000000000000000001 
+	Parameter NumAddrRules bound to: 8 - type: integer 
+	Parameter UseIdForRouting bound to: 1'b0 
+	Parameter Connectivity bound to: 16'b1111111111111111 
+INFO: [Synth 8-6157] synthesizing module 'addr_decode' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/addr_decode.sv:35]
+	Parameter NoIndices bound to: 8 - type: integer 
+	Parameter NoRules bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'addr_decode_dync' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/addr_decode_dync.sv:40]
+	Parameter NoRules bound to: 8 - type: integer 
+	Parameter Napot bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'addr_decode_dync' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/addr_decode_dync.sv:40]
+INFO: [Synth 8-6155] done synthesizing module 'addr_decode' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/addr_decode.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'obi_demux' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_demux.sv:7]
+	Parameter ObiCfg[UseRReady] bound to: 1'b0 
+	Parameter ObiCfg[CombGnt] bound to: 1'b0 
+	Parameter ObiCfg[AddrWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter ObiCfg[DataWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter ObiCfg[IdWidth] bound to: 32'b00000000000000000000000000000001 
+	Parameter ObiCfg[Integrity] bound to: 1'b0 
+	Parameter ObiCfg[BeFull] bound to: 1'b1 
+	Parameter ObiCfg[OptionalCfg][UseAtop] bound to: 1'b0 
+	Parameter ObiCfg[OptionalCfg][UseMemtype] bound to: 1'b0 
+	Parameter ObiCfg[OptionalCfg][UseProt] bound to: 1'b0 
+	Parameter ObiCfg[OptionalCfg][UseDbg] bound to: 1'b0 
+	Parameter ObiCfg[OptionalCfg][AUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter ObiCfg[OptionalCfg][WUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter ObiCfg[OptionalCfg][RUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter ObiCfg[OptionalCfg][MidWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter ObiCfg[OptionalCfg][AChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter ObiCfg[OptionalCfg][RChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter NumMgrPorts bound to: 8 - type: integer 
+	Parameter NumMaxTrans bound to: 32'b00000000000000000000000000000001 
+INFO: [Synth 8-6157] synthesizing module 'delta_counter' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/delta_counter.sv:13]
+	Parameter WIDTH bound to: 1 - type: integer 
+	Parameter STICKY_OVERFLOW bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'delta_counter' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/delta_counter.sv:13]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_demux.sv:95]
+INFO: [Synth 8-6155] done synthesizing module 'obi_demux' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_demux.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'obi_mux' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_mux.sv:10]
+	Parameter SbrPortObiCfg[UseRReady] bound to: 1'b0 
+	Parameter SbrPortObiCfg[CombGnt] bound to: 1'b0 
+	Parameter SbrPortObiCfg[AddrWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter SbrPortObiCfg[DataWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter SbrPortObiCfg[IdWidth] bound to: 32'b00000000000000000000000000000001 
+	Parameter SbrPortObiCfg[Integrity] bound to: 1'b0 
+	Parameter SbrPortObiCfg[BeFull] bound to: 1'b1 
+	Parameter SbrPortObiCfg[OptionalCfg][UseAtop] bound to: 1'b0 
+	Parameter SbrPortObiCfg[OptionalCfg][UseMemtype] bound to: 1'b0 
+	Parameter SbrPortObiCfg[OptionalCfg][UseProt] bound to: 1'b0 
+	Parameter SbrPortObiCfg[OptionalCfg][UseDbg] bound to: 1'b0 
+	Parameter SbrPortObiCfg[OptionalCfg][AUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter SbrPortObiCfg[OptionalCfg][WUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter SbrPortObiCfg[OptionalCfg][RUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter SbrPortObiCfg[OptionalCfg][MidWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter SbrPortObiCfg[OptionalCfg][AChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter SbrPortObiCfg[OptionalCfg][RChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[UseRReady] bound to: 1'b0 
+	Parameter MgrPortObiCfg[CombGnt] bound to: 1'b0 
+	Parameter MgrPortObiCfg[AddrWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter MgrPortObiCfg[DataWidth] bound to: 32'b00000000000000000000000000100000 
+	Parameter MgrPortObiCfg[IdWidth] bound to: 32'b00000000000000000000000000000001 
+	Parameter MgrPortObiCfg[Integrity] bound to: 1'b0 
+	Parameter MgrPortObiCfg[BeFull] bound to: 1'b1 
+	Parameter MgrPortObiCfg[OptionalCfg][UseAtop] bound to: 1'b0 
+	Parameter MgrPortObiCfg[OptionalCfg][UseMemtype] bound to: 1'b0 
+	Parameter MgrPortObiCfg[OptionalCfg][UseProt] bound to: 1'b0 
+	Parameter MgrPortObiCfg[OptionalCfg][UseDbg] bound to: 1'b0 
+	Parameter MgrPortObiCfg[OptionalCfg][AUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[OptionalCfg][WUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[OptionalCfg][RUserWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[OptionalCfg][MidWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[OptionalCfg][AChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter MgrPortObiCfg[OptionalCfg][RChkWidth] bound to: 32'b00000000000000000000000000000000 
+	Parameter NumSbrPorts bound to: 2 - type: integer 
+	Parameter NumMaxTrans bound to: 32'b00000000000000000000000000000001 
+	Parameter UseIdForRouting bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'fifo_v3' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/fifo_v3.sv:15]
+	Parameter FALL_THROUGH bound to: 1'b0 
+	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000000001 
+	Parameter DEPTH bound to: 32'b00000000000000000000000000000001 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_v3' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/fifo_v3.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'rr_arb_tree' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/rr_arb_tree.sv:49]
+	Parameter NumIn bound to: 2 - type: integer 
+	Parameter AxiVldRdy bound to: 1'b1 
+	Parameter LockIn bound to: 1'b1 
+INFO: [Synth 8-6157] synthesizing module 'lzc' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/lzc.sv:17]
+	Parameter WIDTH bound to: 2 - type: integer 
+	Parameter MODE bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'lzc' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/lzc.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'rr_arb_tree' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/common_cells-3bd5b2d671aaec0e/src/rr_arb_tree.sv:49]
+INFO: [Synth 8-6155] done synthesizing module 'obi_mux' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_mux.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'obi_xbar' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_xbar.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'obi_xbar_intf' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/obi-cbdec09f22f66762/src/obi_xbar.sv:161]
+INFO: [Synth 8-6155] done synthesizing module 'obi_icn_ss' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/obi_icn_ss.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'SysCtrl_SS_wrapper_0' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/SysCtrl_SS_wrapper_0.v:13]
+	Parameter OBI_AW bound to: 32 - type: integer 
+	Parameter OBI_DW bound to: 32 - type: integer 
+	Parameter SS_CTRL_W bound to: 8 - type: integer 
+	Parameter NUM_GPIO bound to: 16 - type: integer 
+	Parameter IOCELL_COUNT bound to: 32 - type: integer 
+	Parameter IOCELL_CFGW bound to: 7 - type: integer 
+	Parameter NUM_SS bound to: 8 - type: integer 
+	Parameter OBI_IDW bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'SysCtrl_SS_0' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/SysCtrl_SS_0.v:13]
+	Parameter IOCELL_CFG_W bound to: 7 - type: integer 
+	Parameter IOCELL_COUNT bound to: 32 - type: integer 
+	Parameter NUM_GPIO bound to: 16 - type: integer 
+	Parameter SS_CTRL_W bound to: 8 - type: integer 
+	Parameter OBI_IDW bound to: 1 - type: integer 
+	Parameter OBI_CHKW bound to: 1 - type: integer 
+	Parameter OBI_USERW bound to: 1 - type: integer 
+	Parameter OBI_AW bound to: 32 - type: integer 
+	Parameter OBI_DW bound to: 32 - type: integer 
+	Parameter NUM_SS bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'apb_gpio' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_gpio-f882c1c8a370562e/rtl/apb_gpio.sv:41]
+	Parameter APB_ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter PAD_NUM bound to: 32 - type: integer 
+	Parameter NBIT_PADCFG bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_gpio-f882c1c8a370562e/rtl/apb_gpio.sv:276]
+INFO: [Synth 8-6155] done synthesizing module 'apb_gpio' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_gpio-f882c1c8a370562e/rtl/apb_gpio.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'apb_spi_master' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/apb_spi_master/apb_spi_master.sv:13]
+	Parameter APB_ADDR_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/apb_spi_master/apb_spi_master.sv:213]
+INFO: [Synth 8-6157] synthesizing module 'spi_master_apb_if' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/apb_spi_master/spi_master_apb_if.sv:24]
+	Parameter BUFFER_DEPTH bound to: 10 - type: integer 
+	Parameter APB_ADDR_WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/apb_spi_master/spi_master_apb_if.sv:119]
+INFO: [Synth 8-6155] done synthesizing module 'spi_master_apb_if' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/apb_spi_master/spi_master_apb_if.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'spi_master_fifo' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_fifo.sv:13]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUFFER_DEPTH bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spi_master_fifo' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_fifo.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'spi_master_controller' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_controller.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'spi_master_clkgen' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_clkgen.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'spi_master_clkgen' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_clkgen.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'spi_master_tx' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_tx.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'spi_master_tx' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_tx.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'spi_master_rx' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_rx.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'spi_master_rx' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_rx.sv:11]
+INFO: [Synth 8-155] case statement is not full and has no default [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_controller.sv:156]
+INFO: [Synth 8-155] case statement is not full and has no default [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_controller.sv:209]
+INFO: [Synth 8-6155] done synthesizing module 'spi_master_controller' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/axi_spi_master/spi_master_controller.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'apb_spi_master' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/vendor_ips/apb_spi_master/apb_spi_master.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'apb_uart' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/apb_uart.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'slib_input_sync' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_input_sync.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'slib_input_sync' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_input_sync.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'slib_input_filter' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_input_filter.sv:35]
+	Parameter SIZE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slib_input_filter' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_input_filter.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'uart_interrupt' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/uart_interrupt.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'uart_interrupt' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/uart_interrupt.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'slib_edge_detect' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_edge_detect.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'slib_edge_detect' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_edge_detect.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'uart_baudgen' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/uart_baudgen.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'uart_baudgen' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/uart_baudgen.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'slib_clock_div' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_clock_div.sv:35]
+	Parameter RATIO bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slib_clock_div' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_clock_div.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'slib_fifo' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_fifo.sv:35]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter SIZE_E bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slib_fifo' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_fifo.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'slib_fifo__parameterized0' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_fifo.sv:35]
+	Parameter WIDTH bound to: 11 - type: integer 
+	Parameter SIZE_E bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slib_fifo__parameterized0' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_fifo.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/uart_transmitter.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/uart_transmitter.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'uart_receiver' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/uart_receiver.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'slib_counter' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_counter.sv:35]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slib_counter' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_counter.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'slib_mv_filter' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_mv_filter.sv:35]
+	Parameter WIDTH bound to: 4 - type: integer 
+	Parameter THRESHOLD bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slib_mv_filter' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_mv_filter.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'slib_input_filter__parameterized0' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_input_filter.sv:35]
+	Parameter SIZE bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'slib_input_filter__parameterized0' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/slib_input_filter.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'uart_receiver' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/uart_receiver.sv:35]
+INFO: [Synth 8-226] default block is never used [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/apb_uart.sv:740]
+INFO: [Synth 8-226] default block is never used [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/apb_uart.sv:787]
+INFO: [Synth 8-226] default block is never used [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/apb_uart.sv:880]
+INFO: [Synth 8-6155] done synthesizing module 'apb_uart' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/apb_uart-82e60c3a7ada9dd1/src/apb_uart.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'SS_Ctrl_reg_array' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/SS_Ctrl_reg_array.sv:21]
+	Parameter IOCELL_CFG_W bound to: 7 - type: integer 
+	Parameter IOCELL_COUNT bound to: 32 - type: integer 
+	Parameter AW bound to: 32 - type: integer 
+	Parameter DW bound to: 32 - type: integer 
+	Parameter SS_CTRL_W bound to: 31 - type: integer 
+	Parameter NUM_SS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'SS_Ctrl_reg_array' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/SS_Ctrl_reg_array.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'obi_sram' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/obi_sram.sv:3]
+	Parameter DATA_WIDTH bound to: 32'b00000000000000000000000000100000 
+	Parameter NUM_WORDS bound to: 32'b00000000000000001000000000000000 
+INFO: [Synth 8-6157] synthesizing module 'tc_sram' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/tech_cells_generic-c6f7639ae8d3c67d/src/fpga/tc_sram_xilinx.sv:19]
+	Parameter NumWords bound to: 32'b00000000000000001000000000000000 
+	Parameter DataWidth bound to: 32'b00000000000000000000000000100000 
+	Parameter ByteWidth bound to: 32'b00000000000000000000000000001000 
+	Parameter NumPorts bound to: 32'b00000000000000000000000000000001 
+	Parameter Latency bound to: 32'b00000000000000000000000000000001 
+	Parameter SimInit bound to: none - type: string 
+	Parameter PrintSimCfg bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_spram' [/nfs/tools/xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8732]
+	Parameter MEMORY_SIZE bound to: 1048576 - type: integer 
+	Parameter MEMORY_PRIMITIVE bound to: auto - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter MEMORY_INIT_FILE bound to: none - type: string 
+	Parameter MEMORY_INIT_PARAM bound to: 0 - type: string 
+	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter WAKEUP_TIME bound to: disable_sleep - type: string 
+	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
+	Parameter MESSAGE_CONTROL bound to: 0 - type: integer 
+	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
+	Parameter WRITE_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter READ_DATA_WIDTH_A bound to: 32 - type: integer 
+	Parameter BYTE_WRITE_WIDTH_A bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH_A bound to: 15 - type: integer 
+	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
+	Parameter READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter WRITE_MODE_A bound to: no_change - type: string 
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/nfs/tools/xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/nfs/tools/xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:514]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [/nfs/tools/xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:516]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/nfs/tools/xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_spram' (0#1) [/nfs/tools/xilinx/Vivado/2024.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8732]
+INFO: [Synth 8-6155] done synthesizing module 'tc_sram' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/.bender/git/checkouts/tech_cells_generic-c6f7639ae8d3c67d/src/fpga/tc_sram_xilinx.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'obi_sram' (0#1) [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/obi_sram.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'ibex_wrapper' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/ibex_wrapper.sv:20]
+	Parameter DmBaseAddr bound to: 18874368 - type: integer 
+	Parameter DmExceptionAddr bound to: 32'b00000001001000000000100000010110 
+	Parameter DmHaltAddr bound to: 32'b00000001001000000000100000000000 
+ERROR: [Synth 8-439] module 'tech_sync' not found [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/ibex_wrapper.sv:119]
+	Parameter SYNC_DEPTH bound to: 32'sb00000000000000000000000000000010 
+ERROR: [Synth 8-196] conditional expression could not be resolved to a constant [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/ibex_wrapper.sv:116]
+ERROR: [Synth 8-6156] failed synthesizing module 'ibex_wrapper' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/rtl/ibex_wrapper.sv:20]
+ERROR: [Synth 8-6156] failed synthesizing module 'SysCtrl_SS_0' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/SysCtrl_SS_0.v:13]
+ERROR: [Synth 8-6156] failed synthesizing module 'SysCtrl_SS_wrapper_0' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/SysCtrl_SS_wrapper_0.v:13]
+ERROR: [Synth 8-6156] failed synthesizing module 'Didactic' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/Didactic.v:20]
+ERROR: [Synth 8-6156] failed synthesizing module 'DidacticZ1' [/nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/fpga/rtl/DidacticZ1.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2406.852 ; gain = 576.652 ; free physical = 22767 ; free virtual = 27272
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+182 Infos, 106 Warnings, 1 Critical Warnings and 8 Errors encountered.
+synth_design failed
+ERROR: [Vivado_Tcl 4-5] Elaboration failed - please see the console for details
+INFO: [Common 17-206] Exiting Vivado at Thu Jul  2 18:10:05 2026...
