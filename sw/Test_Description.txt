@@ -1,0 +1,11 @@
+acc_test_1:
+    consists of 3 separate tests:
+        1) set registers for columns and rows of A and B and check, if it was successful. This automatically also shows in the waveforms, if the size of C is correctly set
+        2) Purposefully set the Dimensions of A Rows to 3, which would lead to the computation of a 2x3 * 2x2 Matrix, which would not work. Therefore, the STATUS_DIM_ERR should be set, guarding against this case
+        3) A simple basic computation of a 2x2 A Matrix with B as the 2x2 Identity Matrix. This should lead to C = A and allows us to check the complete functionality of the Accelerator.
+
+        -> Verified to work with the original Didactic-SoC
+
+acc_test_2:
+    A simple test, testing an 8x8 Matrix A multiplied with the 8x8 Identity Matrix B, that should thus result in C = A.
+
