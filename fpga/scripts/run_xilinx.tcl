@@ -20,9 +20,8 @@ if { $PROJECT eq "z1" } {
   puts "ERROR: VCU118 constraints are empty"
 } elseif { $PROJECT eq "basys3" || $PROJECT eq "basys3_vjtag"} {
   set XILINX_PART xc7a35tcpg236-1
-
-# } elseif { $PROJECT eq "a7" } {
-#   set XILINX_PART xc7a100tcsg324-1
+} elseif { $PROJECT eq "a7" } {
+  set XILINX_PART xc7a100tcsg324-1
 } else {
   puts "PROJECT variable contains unsupported board!"
   break

@@ -40,7 +40,7 @@ module DidacticZ1 (
     .jtag_tdo(jtag_tdo),
     .jtag_tms(jtag_tms),
     .jtag_trst(jtag_trst),
-    .reset(reset),
+    .reset_n(reset),
     .spi_csn(spi_csn),
     .spi_data(spi_data),
     .spi_sck(spi_sck),

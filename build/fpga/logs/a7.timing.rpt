@@ -1,0 +1,287 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Tue Jul  7 23:41:33 2026
+| Host         : linux12.clients.eikon.tum.de running 64-bit Ubuntu 24.04.4 LTS
+| Command      : report_timing -nworst 1 -delay_type max -sort_by group -file /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/build//fpga/logs/a7.timing.rpt
+| Design       : DidacticA7
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             1.081ns  (required time - arrival time)
+  Source:                 didactic/i_system_control/SysCtrl_SS/jtag_dbg_wrapper/i_dmi_jtag/i_dmi_jtag_tap/td_o_reg/C
+                            (rising edge-triggered cell FDCE clocked by jtag_clk'  {rise@0.000ns fall@62.500ns period=125.000ns})
+  Destination:            jtag_tdo
+                            (output port clocked by jtag_clk  {rise@0.000ns fall@62.500ns period=125.000ns})
+  Path Group:             jtag_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            20.000ns  (MaxDelay Path 20.000ns)
+  Data Path Delay:        5.541ns  (logic 4.011ns (72.395%)  route 1.530ns (27.605%))
+  Logic Levels:           1  (OBUFT=1)
+  Output Delay:           5.000ns
+  Clock Path Skew:        -7.877ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns
+    Source Clock Delay      (SCD):    7.877ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.501ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    1.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       MaxDelay Path 20.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock jtag_clk fall edge)
+                                                      0.000     0.000 f  
+    P15                                               0.000     0.000 f  jtag_tck (INOUT)
+                         net (fo=0)                   0.000     0.000    jtag_tck
+    P15                  IBUF (Prop_ibuf_I_O)         1.479     1.479 f  jtag_tck_IBUF_inst/O
+                         net (fo=1, routed)           2.016     3.494    didactic/i_system_control/i_io_cell_frame/i_io_cell_jtag_tck/PAD
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.590 f  didactic/i_system_control/i_io_cell_frame/i_io_cell_jtag_tck/TO_CORE_BUFG_inst/O
+                         net (fo=302, routed)         1.782     5.372    didactic/i_system_control/SysCtrl_SS/jtag_dbg_wrapper/i_dmi_jtag/i_dmi_jtag_tap/i_tck_inv/clk_i
+    SLICE_X52Y96         LUT1 (Prop_lut1_I0_O)        0.124     5.496 r  didactic/i_system_control/SysCtrl_SS/jtag_dbg_wrapper/i_dmi_jtag/i_dmi_jtag_tap/i_tck_inv/clk_o_INST_0/O
+                         net (fo=1, routed)           0.567     6.062    didactic/i_system_control/SysCtrl_SS/jtag_dbg_wrapper/i_dmi_jtag/i_dmi_jtag_tap/i_dft_tck_mux/clk0_i
+    BUFGCTRL_X0Y1        BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096     6.158 r  didactic/i_system_control/SysCtrl_SS/jtag_dbg_wrapper/i_dmi_jtag/i_dmi_jtag_tap/i_dft_tck_mux/i_BUFGMUX/O
+                         net (fo=1, routed)           1.718     7.877    didactic/i_system_control/SysCtrl_SS/jtag_dbg_wrapper/i_dmi_jtag/i_dmi_jtag_tap/tck_n
+    SLICE_X1Y64          FDCE                                         r  didactic/i_system_control/SysCtrl_SS/jtag_dbg_wrapper/i_dmi_jtag/i_dmi_jtag_tap/td_o_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y64          FDCE (Prop_fdce_C_Q)         0.456     8.333 r  didactic/i_system_control/SysCtrl_SS/jtag_dbg_wrapper/i_dmi_jtag/i_dmi_jtag_tap/td_o_reg/Q
+                         net (fo=1, routed)           1.530     9.862    didactic/i_system_control/i_io_cell_frame/i_io_cell_jtag_tdo/gen_o_cell.i_o_iobuf/I
+    U16                  OBUFT (Prop_obuft_I_O)       3.555    13.418 r  didactic/i_system_control/i_io_cell_frame/i_io_cell_jtag_tdo/gen_o_cell.i_o_iobuf/OBUFT/O
+                         net (fo=1, unset)            0.000    13.418    jtag_tdo
+    U16                                                               r  jtag_tdo (INOUT)
+  -------------------------------------------------------------------    -------------------
+
+                         max delay                   20.000    20.000    
+                         clock pessimism              0.000    20.000    
+                         clock uncertainty           -0.501    19.499    
+                         output delay                -5.000    14.499    
+  -------------------------------------------------------------------
+                         required time                         14.499    
+                         arrival time                         -13.418    
+  -------------------------------------------------------------------
+                         slack                                  1.081    
+
+Slack (MET) :             3.322ns  (required time - arrival time)
+  Source:                 didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[27]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out_Pll  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF/iFIFOMem_reg[6][1]/CE
+                            (rising edge-triggered cell FDCE clocked by clk_out_Pll  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             clk_out_Pll
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_out_Pll rise@40.000ns - clk_out_Pll rise@0.000ns)
+  Data Path Delay:        35.545ns  (logic 8.852ns (24.903%)  route 26.693ns (75.097%))
+  Logic Levels:           38  (CARRY4=10 LUT2=5 LUT3=3 LUT5=10 LUT6=10)
+  Clock Path Skew:        -0.542ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.029ns = ( 37.971 - 40.000 ) 
+    Source Clock Delay      (SCD):    -1.996ns
+    Clock Pessimism Removal (CPR):    -0.509ns
+  Clock Uncertainty:      0.161ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.314ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_Pll rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen/clk_in
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_gen/clkin1_ibufg/O
+                         net (fo=1, routed)           1.253     2.735    clk_gen/clk_in_Pll
+    PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -8.591    -5.856 r  clk_gen/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.713    -4.143    clk_gen/clk_out_Pll
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096    -4.047 r  clk_gen/clkout1_buf/O
+                         net (fo=5374, routed)        0.140    -3.907    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/core_clock_gate_i/gen_xilinx.u_impl_xilinx/clk_i
+    BUFGCTRL_X0Y17       BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -3.811 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/core_clock_gate_i/gen_xilinx.u_impl_xilinx/gen_gate.gen_bufgce.u_bufgce/O
+                         net (fo=1888, routed)        1.815    -1.996    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/if_stage_i/clk_i
+    SLICE_X14Y36         FDRE                                         r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y36         FDRE (Prop_fdre_C_Q)         0.518    -1.478 f  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/if_stage_i/g_instr_rdata_nr.instr_rdata_id_o_reg[27]/Q
+                         net (fo=56, routed)          1.789     0.311    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/id_stage_i/decoder_i/instr_rdata_alu_i[27]
+    SLICE_X38Y40         LUT5 (Prop_lut5_I2_O)        0.152     0.463 f  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/id_stage_i/decoder_i/ebrk_insn_o_INST_0_i_1/O
+                         net (fo=8, routed)           1.067     1.530    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/id_stage_i/decoder_i/ebrk_insn_o_INST_0_i_1_n_0
+    SLICE_X35Y40         LUT5 (Prop_lut5_I4_O)        0.376     1.906 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/id_stage_i/decoder_i/rf_we_o_INST_0_i_7/O
+                         net (fo=3, routed)           0.340     2.246    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/id_stage_i/decoder_i/rf_we_o_INST_0_i_7_n_0
+    SLICE_X36Y41         LUT6 (Prop_lut6_I1_O)        0.326     2.572 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/id_stage_i/decoder_i/mult_en_o_INST_0_i_1/O
+                         net (fo=7, routed)           0.630     3.203    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/id_stage_i/decoder_i/mult_en_o_INST_0_i_1_n_0
+    SLICE_X47Y42         LUT2 (Prop_lut2_I0_O)        0.118     3.321 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/id_stage_i/decoder_i/mult_sel_o_INST_0/O
+                         net (fo=102, routed)         1.617     4.938    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/mult_sel_i
+    SLICE_X52Y50         LUT2 (Prop_lut2_I0_O)        0.326     5.264 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i_i_1/O
+                         net (fo=65, routed)          1.151     6.416    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/multdiv_sel_i
+    SLICE_X50Y42         LUT3 (Prop_lut3_I1_O)        0.148     6.564 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[0]_INST_0_i_1/O
+                         net (fo=1, routed)           0.625     7.189    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_in_a[3]
+    SLICE_X51Y42         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.589     7.778 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[0]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     7.778    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[0]_INST_0_n_0
+    SLICE_X51Y43         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.892 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[3]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     7.892    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[3]_INST_0_n_0
+    SLICE_X51Y44         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.006 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[7]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     8.006    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[7]_INST_0_n_0
+    SLICE_X51Y45         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.120 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[11]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     8.120    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[11]_INST_0_n_0
+    SLICE_X51Y46         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.234 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[15]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     8.234    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[15]_INST_0_n_0
+    SLICE_X51Y47         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.348 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[19]_INST_0/CO[3]
+                         net (fo=1, routed)           0.000     8.348    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[19]_INST_0_n_0
+    SLICE_X51Y48         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     8.696 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/ex_block_i/alu_i/adder_result_o[23]_INST_0/O[1]
+                         net (fo=28, routed)          0.663     9.359    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/if_stage_i/branch_target_ex_i[24]
+    SLICE_X40Y48         LUT5 (Prop_lut5_I1_O)        0.299     9.658 f  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i_i_39/O
+                         net (fo=1, routed)           0.495    10.153    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i_i_39_n_0
+    SLICE_X40Y48         LUT6 (Prop_lut6_I4_O)        0.327    10.480 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i_i_8/O
+                         net (fo=3, routed)           0.792    11.272    didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/addr_i[24]
+    SLICE_X38Y41         LUT5 (Prop_lut5_I2_O)        0.124    11.396 r  didactic/i_system_control/SysCtrl_SS/i_ibex_wrapper/Ibex_Core/u_ibex_core/if_stage_i/gen_prefetch_buffer.prefetch_buffer_i/instr_addr_o[24]_INST_0/O
+                         net (fo=21, routed)          0.978    12.373    didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_addr_decode/i_addr_decode_dync/addr_i[24]
+    SLICE_X33Y35         LUT2 (Prop_lut2_I0_O)        0.124    12.497 r  didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_addr_decode/i_addr_decode_dync/idx_o[1]_INST_0_i_13/O
+                         net (fo=1, routed)           0.000    12.497    didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_addr_decode/i_addr_decode_dync/idx_o[1]_INST_0_i_13_n_0
+    SLICE_X33Y35         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    13.029 r  didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_addr_decode/i_addr_decode_dync/idx_o[1]_INST_0_i_1/CO[3]
+                         net (fo=3, routed)           1.597    14.627    didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_addr_decode/i_addr_decode_dync/idx_o218_in
+    SLICE_X40Y37         LUT6 (Prop_lut6_I0_O)        0.124    14.751 r  didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_addr_decode/i_addr_decode_dync/idx_o[2]_INST_0_i_6/O
+                         net (fo=2, routed)           0.467    15.218    didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_addr_decode/i_addr_decode_dync/idx_o[2]_INST_0_i_6_n_0
+    SLICE_X39Y37         LUT6 (Prop_lut6_I1_O)        0.124    15.342 r  didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_addr_decode/i_addr_decode_dync/idx_o[0]_INST_0/O
+                         net (fo=124, routed)         1.013    16.355    didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_demux/sbr_port_select_i[0]
+    SLICE_X25Y35         LUT6 (Prop_lut6_I1_O)        0.124    16.479 r  didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_demux/sbr_port_rsp_o[gnt]_INST_0_i_4/O
+                         net (fo=1, routed)           0.290    16.769    didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_demux/sbr_port_rsp_o[gnt]_INST_0_i_4_n_0
+    SLICE_X25Y34         LUT6 (Prop_lut6_I5_O)        0.124    16.893 f  didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_demux/sbr_port_rsp_o[gnt]_INST_0_i_1/O
+                         net (fo=123, routed)         0.799    17.692    didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_demux/sbr_port_rsp_o[gnt]_INST_0_i_1_n_0
+    SLICE_X22Y32         LUT5 (Prop_lut5_I1_O)        0.150    17.842 r  didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_demux[2].i_demux/mgr_ports_req_o[2][req]_INST_0/O
+                         net (fo=4, routed)           0.826    18.668    didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_mux[2].i_mux/i_rr_arb/req_i[2]
+    SLICE_X30Y26         LUT6 (Prop_lut6_I3_O)        0.326    18.994 r  didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_mux[2].i_mux/i_rr_arb/idx_o[1]_INST_0/O
+                         net (fo=70, routed)          1.084    20.078    didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_mux[2].i_mux/i_rr_arb/idx_o[1]
+    SLICE_X29Y35         LUT5 (Prop_lut5_I1_O)        0.124    20.202 f  didactic/i_system_control/SysCtrl_SS/sysctrl_obi_xbar/i_sysctrl_main_obi_xbar/i_obi_xbar/gen_mux[2].i_mux/i_rr_arb/data_o[addr][19]_INST_0/O
+                         net (fo=9, routed)           0.848    21.049    didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_addr_decode/i_addr_decode_dync/addr_i[19]
+    SLICE_X39Y30         LUT2 (Prop_lut2_I1_O)        0.124    21.173 r  didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_addr_decode/i_addr_decode_dync/idx_o[1]_INST_0_i_61/O
+                         net (fo=1, routed)           0.000    21.173    didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_addr_decode/i_addr_decode_dync/idx_o[1]_INST_0_i_61_n_0
+    SLICE_X39Y30         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    21.723 r  didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_addr_decode/i_addr_decode_dync/idx_o[1]_INST_0_i_15/CO[3]
+                         net (fo=1, routed)           0.000    21.723    didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_addr_decode/i_addr_decode_dync/idx_o[1]_INST_0_i_15_n_0
+    SLICE_X39Y31         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    21.837 r  didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_addr_decode/i_addr_decode_dync/idx_o[1]_INST_0_i_2/CO[3]
+                         net (fo=2, routed)           1.479    23.316    didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_addr_decode/i_addr_decode_dync/idx_o32_in
+    SLICE_X38Y34         LUT6 (Prop_lut6_I1_O)        0.124    23.440 f  didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_addr_decode/i_addr_decode_dync/idx_o[1]_INST_0/O
+                         net (fo=9, routed)           1.357    24.797    didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_demux/sbr_port_select_i[1]
+    SLICE_X39Y56         LUT5 (Prop_lut5_I2_O)        0.150    24.947 r  didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_demux/sbr_port_rsp_o[gnt]_INST_0_i_2/O
+                         net (fo=93, routed)          1.168    26.115    didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_demux/sbr_port_rsp_o[gnt]_INST_0_i_2_n_0
+    SLICE_X42Y60         LUT6 (Prop_lut6_I1_O)        0.332    26.447 r  didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_demux[1].i_demux/mgr_ports_req_o[1][req]_INST_0/O
+                         net (fo=2, routed)           0.942    27.389    didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_mux[1].i_mux/i_rr_arb/req_i[1]
+    SLICE_X44Y71         LUT3 (Prop_lut3_I2_O)        0.118    27.507 r  didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_mux[1].i_mux/i_rr_arb/req_o_INST_0/O
+                         net (fo=3, routed)           0.580    28.087    didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_mux[1].i_mux/mgr_port_req
+    SLICE_X41Y72         LUT2 (Prop_lut2_I0_O)        0.322    28.409 r  didactic/i_system_control/SysCtrl_SS/peripherals_obi_to_apb/i_peripheral_obi_xbar/i_obi_xbar/gen_mux[1].i_mux/mgr_port_req_o[req]_INST_0/O
+                         net (fo=12, routed)          0.831    29.240    didactic/i_system_control/SysCtrl_SS/apb_uart/PSEL
+    SLICE_X40Y81         LUT3 (Prop_lut3_I1_O)        0.321    29.561 r  didactic/i_system_control/SysCtrl_SS/apb_uart/iIER[3]_i_2/O
+                         net (fo=4, routed)           0.443    30.004    didactic/i_system_control/SysCtrl_SS/apb_uart/p_52_in
+    SLICE_X40Y80         LUT5 (Prop_lut5_I3_O)        0.326    30.330 r  didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF_i_2/O
+                         net (fo=1, routed)           0.294    30.625    didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF_i_2_n_0
+    SLICE_X38Y80         LUT6 (Prop_lut6_I5_O)        0.124    30.749 r  didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF_i_1/O
+                         net (fo=5, routed)           0.504    31.253    didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF/WRITE
+    SLICE_X34Y79         LUT5 (Prop_lut5_I0_O)        0.124    31.377 r  didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF/iUSAGE[4]_i_3/O
+                         net (fo=66, routed)          1.200    32.577    didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF/iWRAddr0
+    SLICE_X30Y74         LUT5 (Prop_lut5_I0_O)        0.150    32.727 r  didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF/iFIFOMem[6][7]_i_1/O
+                         net (fo=8, routed)           0.823    33.550    didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF/iFIFOMem[6][7]_i_1_n_0
+    SLICE_X29Y71         FDCE                                         r  didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF/iFIFOMem_reg[6][1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_Pll rise edge)
+                                                     40.000    40.000 r  
+    E3                                                0.000    40.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    40.000    clk_gen/clk_in
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    41.411 r  clk_gen/clkin1_ibufg/O
+                         net (fo=1, routed)           1.181    42.592    clk_gen/clk_in_Pll
+    PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.856    34.736 r  clk_gen/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.634    36.370    clk_gen/clk_out_Pll
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    36.461 r  clk_gen/clkout1_buf/O
+                         net (fo=5374, routed)        1.509    37.971    didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF/CLK
+    SLICE_X29Y71         FDCE                                         r  didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF/iFIFOMem_reg[6][1]/C
+                         clock pessimism             -0.509    37.462    
+                         clock uncertainty           -0.161    37.301    
+    SLICE_X29Y71         FDCE (Setup_fdce_C_CE)      -0.429    36.872    didactic/i_system_control/SysCtrl_SS/apb_uart/UART_TXFF/iFIFOMem_reg[6][1]
+  -------------------------------------------------------------------
+                         required time                         36.872    
+                         arrival time                         -33.550    
+  -------------------------------------------------------------------
+                         slack                                  3.322    
+
+Slack (MET) :             28.767ns  (required time - arrival time)
+  Source:                 didactic/i_system_control/rstgen_0/i_rstgen_bypass/synch_regs_q_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out_Pll  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Destination:            didactic/i_system_control/SysCtrl_SS/ctrl_reg_array/io_cell_cfg_reg_reg[28][10]/CLR
+                            (recovery check against rising-edge clock clk_out_Pll  {rise@0.000ns fall@20.000ns period=40.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            40.000ns  (clk_out_Pll rise@40.000ns - clk_out_Pll rise@0.000ns)
+  Data Path Delay:        10.735ns  (logic 0.676ns (6.297%)  route 10.059ns (93.703%))
+  Logic Levels:           2  (BUFGCTRL=1 LUT1=1)
+  Clock Path Skew:        0.068ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.861ns = ( 38.139 - 40.000 ) 
+    Source Clock Delay      (SCD):    -2.437ns
+    Clock Pessimism Removal (CPR):    -0.509ns
+  Clock Uncertainty:      0.161ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.314ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out_Pll rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk_in (IN)
+                         net (fo=0)                   0.000     0.000    clk_gen/clk_in
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_gen/clkin1_ibufg/O
+                         net (fo=1, routed)           1.253     2.735    clk_gen/clk_in_Pll
+    PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -8.591    -5.856 r  clk_gen/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.713    -4.143    clk_gen/clk_out_Pll
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096    -4.047 r  clk_gen/clkout1_buf/O
+                         net (fo=5374, routed)        1.610    -2.437    didactic/i_system_control/rstgen_0/i_rstgen_bypass/clk_i
+    SLICE_X52Y100        FDCE                                         r  didactic/i_system_control/rstgen_0/i_rstgen_bypass/synch_regs_q_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y100        FDCE (Prop_fdce_C_Q)         0.456    -1.981 r  didactic/i_system_control/rstgen_0/i_rstgen_bypass/synch_regs_q_reg[3]/Q
+                         net (fo=1, routed)           0.727    -1.254    didactic/i_system_control/rstgen_0/i_rstgen_bypass/i_tc_clk_mux2_rst_no/clk0_i
+    BUFGCTRL_X0Y18       BUFGCTRL (Prop_bufgctrl_I0_O)
+                                                      0.096    -1.158 r  didactic/i_system_control/rstgen_0/i_rstgen_bypass/i_tc_clk_mux2_rst_no/i_BUFGMUX/O
+                         net (fo=112, routed)         2.255     1.097    didactic/i_system_control/SysCtrl_SS/ctrl_reg_array/reset_n
+    SLICE_X28Y7          LUT1 (Prop_lut1_I0_O)        0.124     1.221 f  didactic/i_system_control/SysCtrl_SS/ctrl_reg_array/io_cell_cfg_reg[31][0]_i_2/O
+                         net (fo=1410, routed)        7.076     8.298    didactic/i_system_control/SysCtrl_SS/ctrl_reg_array/io_cell_cfg_reg[31][0]_i_2_n_0
+    SLICE_X22Y19         FDCE                                         f  didactic/i_system_control/SysCtrl_SS/ctrl_reg_array/io_cell_cfg_reg_reg[28][10]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out_Pll rise edge)
+                                                     40.000    40.000 r  
+    E3                                                0.000    40.000 r  clk_in (IN)
+                         net (fo=0)                   0.000    40.000    clk_gen/clk_in
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    41.411 r  clk_gen/clkin1_ibufg/O
+                         net (fo=1, routed)           1.181    42.592    clk_gen/clk_in_Pll
+    PLLE2_ADV_X1Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -7.856    34.736 r  clk_gen/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.634    36.370    clk_gen/clk_out_Pll
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    36.461 r  clk_gen/clkout1_buf/O
+                         net (fo=5374, routed)        1.678    38.139    didactic/i_system_control/SysCtrl_SS/ctrl_reg_array/clk
+    SLICE_X22Y19         FDCE                                         r  didactic/i_system_control/SysCtrl_SS/ctrl_reg_array/io_cell_cfg_reg_reg[28][10]/C
+                         clock pessimism             -0.509    37.631    
+                         clock uncertainty           -0.161    37.470    
+    SLICE_X22Y19         FDCE (Recov_fdce_C_CLR)     -0.405    37.065    didactic/i_system_control/SysCtrl_SS/ctrl_reg_array/io_cell_cfg_reg_reg[28][10]
+  -------------------------------------------------------------------
+                         required time                         37.065    
+                         arrival time                          -8.298    
+  -------------------------------------------------------------------
+                         slack                                 28.767    
+
+
+
+

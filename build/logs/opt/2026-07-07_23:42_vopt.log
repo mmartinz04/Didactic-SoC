@@ -1,0 +1,379 @@
+QuestaSim-64 vopt 2023.4 Compiler 2023.10 Oct  9 2023
+** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+Start time: 23:42:46 on Jul 07,2026
+vopt -L /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/sim/../build/didactic_lib -sv -suppress vopt-2577 "+acc=npr" -work /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/sim/../build/didactic_lib tb_didactic -o tb_didactic_opt -l /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/sim/../build/logs/opt/2026-07-07_23:42_vopt.log 
+
+Top level modules:
+	tb_didactic
+
+Analyzing design...
+-- Loading module tb_didactic
+-- Importing package jtag_pkg
+-- Importing package dm
+-- Importing package riscv
+-- Loading module Didactic
+-- Loading module analog_wrapper_0
+-- Loading module TOPCELL_ISAR_with_padframe
+-- Loading module obi_icn_ss
+-- Loading module obi_xbar_intf
+-- Importing package obi_pkg
+-- Importing package cf_math_pkg
+-- Loading module obi_xbar
+-- Loading module SysCtrl_SS_wrapper_0
+-- Loading module SysCtrl_SS_0
+-- Loading module apb_gpio
+-- Loading module apb_spi_master
+-- Loading module spi_master_apb_if
+-- Loading module spi_master_fifo
+-- Loading module spi_master_controller
+-- Loading module spi_master_clkgen
+-- Loading module spi_master_tx
+-- Loading module spi_master_rx
+-- Loading module apb_uart
+-- Loading module slib_input_sync
+-- Loading module slib_input_filter
+-- Loading module uart_interrupt
+-- Loading module slib_edge_detect
+-- Loading module uart_baudgen
+-- Loading module slib_clock_div
+-- Loading module slib_fifo
+-- Loading module uart_transmitter
+-- Loading module uart_receiver
+-- Loading module slib_counter
+-- Loading module slib_mv_filter
+-- Loading module SS_Ctrl_reg_array
+-- Loading module obi_sram
+-- Loading module tc_sram
+-- Loading module ibex_wrapper
+-- Importing package ibex_pkg
+-- Importing package prim_ram_1p_pkg
+-- Loading module ibex_top_tracing
+-- Loading module ibex_top
+-- Importing package prim_secded_pkg
+-- Loading module prim_clock_gating
+-- Importing package prim_pkg
+-- Loading module prim_buf
+-- Loading module ibex_core
+-- Loading module ibex_if_stage
+-- Loading module ibex_compressed_decoder
+-- Loading module ibex_id_stage
+-- Loading module ibex_decoder
+-- Loading module ibex_controller
+-- Loading module ibex_ex_block
+-- Loading module ibex_alu
+-- Loading module ibex_load_store_unit
+-- Loading module ibex_wb_stage
+-- Loading module ibex_cs_registers
+-- Loading module ibex_csr
+-- Loading module ibex_counter
+-- Loading module ibex_tracer
+-- Importing package ibex_tracer_pkg
+-- Loading module jtag_dbg_wrapper_obi
+-- Loading module dmi_jtag
+-- Loading module dmi_jtag_tap
+-- Loading module tc_clk_inverter
+-- Loading module tc_clk_mux2
+-- Loading module dmi_cdc
+-- Loading module cdc_2phase_clearable
+-- Loading module cdc_2phase_src_clearable
+-- Loading module sync
+-- Loading module cdc_2phase_dst_clearable
+-- Loading module cdc_reset_ctrlr
+-- Importing package cdc_reset_ctrlr_pkg
+-- Loading module cdc_reset_ctrlr_half
+-- Loading module cdc_4phase_src
+-- Loading module cdc_4phase_dst
+-- Loading module dm_obi_top
+-- Loading module dm_top
+-- Loading module dm_csrs
+-- Loading module fifo_v2
+-- Loading module fifo_v3
+-- Loading module dm_sba
+-- Loading module dm_mem
+-- Loading module peripherals_obi_to_apb
+-- Loading module obi_to_apb_intf
+-- Loading module sysctrl_obi_xbar
+-- Loading module io_cell_frame_sysctrl
+-- Loading module io_cell_wrapper
+-- Loading module pmod_mux
+-- Loading module rstgen
+-- Loading module rstgen_bypass
+-- Loading module student_wrapper_0
+-- Loading module tc_clk_gating
+-- Loading module subsystem
+-- Loading module apb_interface
+-- Loading module buffer_controller
+-- Loading module activation_buffer
+-- Loading module weight_buffer
+-- Loading module systolic_array
+-- Loading module output_buffer
+-- Loading module accelerator_control
+-- Loading module generic_and
+-- Loading module student_wrapper_1
+-- Loading module student_wrapper_2
+-- Loading module student_wrapper_3
+-- Loading module student_wrapper_4
+-- Loading module student_wrapper_5
+-- Loading module student_wrapper_6
+-- Loading module uart_tb_rx
+-- Loading interface spi_slave
+-- Loading interface OBI_BUS
+-- Loading interface APB
+-- Importing package apb_pkg
+-- Loading module obi_cut_intf
+-- Loading module obi_cut
+-- Loading module spill_register
+-- Loading module spill_register_flushable
+-- Loading module addr_decode
+-- Loading module addr_decode_dync
+-- Loading module obi_demux
+-- Loading module delta_counter
+-- Loading module obi_mux
+-- Loading module rr_arb_tree
+-- Loading module tech_sync
+-- Loading module prim_generic_clock_gating
+-- Loading module prim_generic_buf
+-- Loading module ibex_prefetch_buffer
+-- Loading module ibex_fetch_fifo
+-- Loading module ibex_multdiv_fast
+-- Loading module ibex_register_file_ff
+-- Loading module debug_rom
+-- Loading module i_cell
+-- Loading module o_cell
+-- Loading module io_cell
+-- Loading module MAC_Unit
+-- Loading module lzc
+Optimizing 185 design-units (inlining 24/1096 module instances):
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Optimizing package prim_ram_1p_pkg(fast)
+-- Optimizing package cdc_reset_ctrlr_pkg(fast)
+-- Optimizing module addr_decode(fast__1)
+-- Optimizing module addr_decode(fast__2)
+-- Optimizing module sync(fast)
+-- Optimizing module sync(fast__1)
+-- Optimizing module slib_input_sync(fast)
+-- Optimizing module slib_edge_detect(fast)
+-- Optimizing module prim_clock_gating(fast)
+-- Optimizing module spill_register(fast)
+-- Optimizing module spill_register(fast__1)
+-- Optimizing interface APB(fast__1)
+-- Optimizing module tc_clk_gating(fast)
+-- Optimizing module io_cell(fast)
+-- Optimizing module prim_buf(fast)
+-- Optimizing module prim_buf(fast__1)
+-- Optimizing module prim_generic_buf(fast)
+-- Optimizing module prim_generic_buf(fast__1)
+-- Optimizing module rstgen(fast)
+-- Optimizing module prim_generic_clock_gating(fast)
+-- Optimizing module tc_clk_mux2(fast)
+-- Optimizing module generic_and(fast)
+-- Optimizing module TOPCELL_ISAR_with_padframe(fast)
+-- Optimizing module tc_clk_inverter(fast)
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Optimizing package prim_pkg(fast)
+-- Optimizing package apb_pkg(fast)
+-- Optimizing module i_cell(fast)
+-- Optimizing module o_cell(fast)
+-- Optimizing interface APB(fast)
+-- Optimizing interface OBI_BUS(fast)
+-- Optimizing interface spi_slave(fast)
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Optimizing module SS_Ctrl_reg_array(fast)
+-- Optimizing module pmod_mux(fast)
+-- Optimizing module dm_sba(fast)
+-- Optimizing module uart_receiver(fast)
+-- Optimizing module uart_transmitter(fast)
+-- Optimizing module cdc_reset_ctrlr_half(fast)
+-- Optimizing module apb_interface(fast)
+-- Optimizing module ibex_wrapper(fast)
+-- Optimizing module fifo_v3(fast)
+-- Optimizing module fifo_v3(fast__1)
+-- Optimizing module fifo_v3(fast__2)
+-- Optimizing module ibex_top_tracing(fast)
+-- Optimizing module ibex_ex_block(fast)
+-- Optimizing module buffer_controller(fast)
+-- Optimizing module addr_decode_dync(fast)
+-- Optimizing module addr_decode_dync(fast__1)
+-- Optimizing module addr_decode_dync(fast__2)
+-- Optimizing module output_buffer(fast)
+-- Optimizing module obi_demux(fast)
+-- Optimizing module obi_demux(fast__1)
+-- Optimizing module obi_demux(fast__2)
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Optimizing package dm(fast)
+-- Optimizing package riscv(fast)
+-- Optimizing package ibex_pkg(fast)
+-- Optimizing module obi_cut_intf(fast__2)
+-- Optimizing module ibex_compressed_decoder(fast)
+-- Optimizing module obi_mux(fast__2)
+-- Optimizing module lzc(fast__1)
+-- Optimizing module obi_xbar(fast__1)
+-- Optimizing module dmi_jtag_tap(fast)
+-- Optimizing module obi_mux(fast)
+-- Optimizing module obi_mux(fast__1)
+-- Optimizing module dmi_jtag(fast)
+-- Optimizing module subsystem(fast)
+-- Optimizing module ibex_prefetch_buffer(fast)
+-- Optimizing module ibex_wb_stage(fast)
+-- Optimizing module lzc(fast)
+-- Optimizing module apb_spi_master(fast)
+-- Optimizing module tb_didactic(fast)
+-- Optimizing module spi_master_apb_if(fast)
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Optimizing module rr_arb_tree(fast__1)
+-- Optimizing module dm_mem(fast)
+-- Optimizing module ibex_register_file_ff(fast)
+-- Optimizing module ibex_load_store_unit(fast)
+-- Optimizing module obi_xbar(fast__2)
+-- Optimizing module obi_xbar(fast)
+-- Optimizing module tc_sram(fast)
+-- Optimizing module tc_sram(fast__1)
+-- Optimizing module SysCtrl_SS_wrapper_0(fast)
+-- Optimizing module io_cell_frame_sysctrl(fast)
+-- Optimizing module spi_master_controller(fast)
+-- Optimizing module ibex_fetch_fifo(fast)
+-- Inlining interface OBI_BUS(fast__1)
+-- Inlining interface OBI_BUS(fast__4)
+-- Optimizing module peripherals_obi_to_apb(fast)
+-- Optimizing module obi_cut_intf(fast)
+-- Optimizing module obi_cut_intf(fast__1)
+-- Optimizing module dm_top(fast)
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Inlining interface OBI_BUS(fast__5)
+-- Inlining interface OBI_BUS(fast__1)
+-- Optimizing module sysctrl_obi_xbar(fast)
+-- Optimizing module Didactic(fast)
+-- Optimizing module ibex_if_stage(fast)
+-- Optimizing module apb_uart(fast)
+-- Optimizing module weight_buffer(fast)
+-- Optimizing module ibex_controller(fast)
+-- Optimizing module ibex_decoder(fast)
+-- Inlining interface OBI_BUS(fast__4)
+-- Optimizing module obi_icn_ss(fast)
+-- Optimizing module rr_arb_tree(fast__2)
+-- Optimizing module obi_xbar_intf(fast__1)
+-- Optimizing module ibex_multdiv_fast(fast)
+-- Optimizing module rr_arb_tree(fast)
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Optimizing module ibex_top(fast)
+-- Optimizing module ibex_tracer(fast)
+-- Optimizing module systolic_array(fast)
+-- Optimizing module ibex_id_stage(fast)
+-- Optimizing module apb_gpio(fast)
+-- Optimizing module obi_xbar_intf(fast)
+-- Optimizing module SysCtrl_SS_0(fast)
+-- Optimizing module obi_xbar_intf(fast__2)
+-- Optimizing module dm_csrs(fast)
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Optimizing package jtag_pkg(fast)
+-- Optimizing package prim_secded_pkg(fast)
+-- Optimizing module ibex_cs_registers(fast)
+-- Optimizing module ibex_core(fast)
+-- Optimizing module ibex_alu(fast)
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Optimizing package ibex_tracer_pkg(fast)
+-- Optimizing module spi_master_tx(fast)
+-- Optimizing module spi_master_rx(fast)
+-- Optimizing module slib_fifo(fast)
+-- Optimizing module slib_fifo(fast__1)
+-- Optimizing module activation_buffer(fast)
+-- Optimizing module spi_master_fifo(fast)
+-- Optimizing module student_wrapper_0(fast)
+-- Optimizing module student_wrapper_1(fast)
+-- Optimizing module student_wrapper_2(fast)
+** Warning: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_2.v(154): (vopt-2685) [TFMPC] - Too few port connections for 'i_subsystem_2'.  Expected 16, found 15.
+** Warning: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_2.v(154): (vopt-2718) [TFMPC] - Missing connection for port 'PSTRB'.
+-- Optimizing module student_wrapper_3(fast)
+** Warning: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_3.v(154): (vopt-2685) [TFMPC] - Too few port connections for 'i_subsystem_3'.  Expected 16, found 15.
+** Warning: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_3.v(154): (vopt-2718) [TFMPC] - Missing connection for port 'PSTRB'.
+-- Optimizing module student_wrapper_4(fast)
+** Warning: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_4.v(154): (vopt-2685) [TFMPC] - Too few port connections for 'i_subsystem_4'.  Expected 16, found 15.
+** Warning: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_4.v(154): (vopt-2718) [TFMPC] - Missing connection for port 'PSTRB'.
+-- Optimizing module student_wrapper_5(fast)
+** Warning: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_5.v(154): (vopt-2685) [TFMPC] - Too few port connections for 'i_subsystem_5'.  Expected 16, found 15.
+** Warning: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_5.v(154): (vopt-2718) [TFMPC] - Missing connection for port 'PSTRB'.
+-- Optimizing module student_wrapper_6(fast)
+** Warning: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_6.v(154): (vopt-2685) [TFMPC] - Too few port connections for 'i_subsystem_6'.  Expected 16, found 15.
+** Warning: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_6.v(154): (vopt-2718) [TFMPC] - Missing connection for port 'PSTRB'.
+-- Optimizing module ibex_counter(fast__1)
+-- Optimizing module ibex_counter(fast)
+-- Optimizing module cdc_2phase_clearable(fast)
+-- Optimizing module cdc_2phase_clearable(fast__1)
+-- Optimizing module jtag_dbg_wrapper_obi(fast)
+-- Optimizing module dm_obi_top(fast)
+-- Optimizing module accelerator_control(fast)
+-- Optimizing module spill_register_flushable(fast)
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Optimizing package obi_pkg(fast)
+-- Optimizing module spill_register_flushable(fast__1)
+-- Optimizing module delta_counter(fast)
+-- Optimizing module cdc_4phase_dst(fast)
+-- Optimizing module cdc_4phase_src(fast)
+-- Optimizing module uart_tb_rx(fast)
+-- Optimizing module uart_interrupt(fast)
+-- Optimizing module obi_to_apb_intf(fast)
+-- Optimizing module cdc_2phase_src_clearable(fast)
+-- Optimizing module cdc_2phase_src_clearable(fast__1)
+-- Optimizing module obi_sram(fast)
+-- Optimizing module obi_sram(fast__1)
+-- Optimizing module cdc_2phase_dst_clearable(fast)
+-- Optimizing module cdc_2phase_dst_clearable(fast__1)
+-- Optimizing module MAC_Unit(fast)
+-- Optimizing module fifo_v2(fast)
+-- Optimizing module dmi_cdc(fast)
+-- Optimizing module spi_master_clkgen(fast)
+-- Optimizing module ibex_csr(fast)
+-- Optimizing module ibex_csr(fast__1)
+-- Optimizing module ibex_csr(fast__2)
+-- Optimizing module ibex_csr(fast__3)
+-- Optimizing module ibex_csr(fast__4)
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object '/usr/lib/x86_64-linux-gnu/libfreetype.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+-- Optimizing package cf_math_pkg(fast)
+-- Optimizing module ibex_csr(fast__5)
+-- Optimizing module ibex_csr(fast__6)
+-- Optimizing module ibex_csr(fast__7)
+-- Optimizing module slib_counter(fast)
+-- Optimizing interface spi_slave(fast__1)
+-- Optimizing module analog_wrapper_0(fast)
+-- Optimizing module obi_cut(fast)
+-- Optimizing module cdc_reset_ctrlr(fast)
+-- Optimizing module slib_input_filter(fast)
+-- Optimizing module slib_input_filter(fast__1)
+-- Optimizing module tech_sync(fast)
+-- Optimizing module debug_rom(fast)
+-- Optimizing module rstgen_bypass(fast)
+-- Optimizing module slib_mv_filter(fast)
+-- Optimizing module io_cell_wrapper(fast__2)
+-- Optimizing interface OBI_BUS(fast__2)
+-- Optimizing interface OBI_BUS(fast__3)
+-- Optimizing module slib_clock_div(fast)
+-- Optimizing interface OBI_BUS(fast__6)
+-- Optimizing module io_cell_wrapper(fast__1)
+-- Optimizing module uart_baudgen(fast)
+-- Optimizing module io_cell_wrapper(fast)
+-- Optimizing module addr_decode(fast)
+Optimized design name is tb_didactic_opt
+End time: 23:42:48 on Jul 07,2026, Elapsed time: 0:00:02
+Errors: 0, Warnings: 11

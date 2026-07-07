@@ -1,0 +1,815 @@
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -gui -L /home/ge87dix/Edu4Chip/Didactic-SoC/sim/../build/didactic_lib -suppress vsim-3009 -suppress vsim-8386 -voptargs="+acc=npr" "+TESTCASE=acc_test_seq" -work /home/ge87dix/Edu4Chip/Didactic-SoC/sim/../build/didactic_lib tb_didactic_opt -do "run 0ms;" -l /home/ge87dix/Edu4Chip/Didactic-SoC/sim/../build/logs/sim/2026-07-07_23:42_sim.log 
+# Start time: 23:42:52 on Jul 07,2026
+# Loading /tmp/ge87dix@linux12.clients.eikon.tum.de_dpi_633613/linux_x86_64_gcc-10.3.0/export_tramp.so
+# Loading sv_std.std
+# Loading work.riscv(fast)
+# Loading work.dm(fast)
+# Loading work.jtag_pkg(fast)
+# Loading work.tb_didactic(fast)
+# Loading work.Didactic(fast)
+# Loading work.analog_wrapper_0(fast)
+# Loading work.TOPCELL_ISAR_with_padframe(fast)
+# Loading work.cf_math_pkg(fast)
+# Loading work.obi_pkg(fast)
+# Loading work.obi_icn_ss(fast)
+# Loading work.obi_cut_intf(fast__1)
+# Loading work.obi_cut(fast)
+# Loading work.spill_register(fast)
+# Loading work.spill_register_flushable(fast)
+# Loading work.spill_register(fast__1)
+# Loading work.spill_register_flushable(fast__1)
+# Loading work.obi_cut_intf(fast)
+# Loading work.obi_xbar_intf(fast)
+# Loading work.obi_xbar(fast)
+# Loading work.addr_decode(fast)
+# Loading work.addr_decode_dync(fast)
+# Loading work.obi_demux(fast)
+# Loading work.delta_counter(fast)
+# Loading work.obi_mux(fast)
+# Loading work.rr_arb_tree(fast)
+# Loading work.lzc(fast)
+# Loading work.fifo_v3(fast)
+# Loading work.obi_to_apb_intf(fast)
+# Loading work.SysCtrl_SS_wrapper_0(fast)
+# Loading work.SysCtrl_SS_0(fast)
+# Loading work.apb_gpio(fast)
+# Loading work.apb_spi_master(fast)
+# Loading work.spi_master_apb_if(fast)
+# Loading work.spi_master_fifo(fast)
+# Loading work.spi_master_controller(fast)
+# Loading work.spi_master_clkgen(fast)
+# Loading work.spi_master_tx(fast)
+# Loading work.spi_master_rx(fast)
+# Loading work.apb_uart(fast)
+# Loading work.slib_input_sync(fast)
+# Loading work.slib_input_filter(fast)
+# Loading work.uart_interrupt(fast)
+# Loading work.slib_edge_detect(fast)
+# Loading work.uart_baudgen(fast)
+# Loading work.slib_clock_div(fast)
+# Loading work.slib_fifo(fast)
+# Loading work.slib_fifo(fast__1)
+# Loading work.uart_transmitter(fast)
+# Loading work.uart_receiver(fast)
+# Loading work.slib_counter(fast)
+# Loading work.slib_mv_filter(fast)
+# Loading work.slib_input_filter(fast__1)
+# Loading work.SS_Ctrl_reg_array(fast)
+# Loading work.obi_sram(fast)
+# Loading work.tc_sram(fast)
+# Loading work.prim_ram_1p_pkg(fast)
+# Loading work.ibex_pkg(fast)
+# Loading work.ibex_wrapper(fast)
+# Loading work.tech_sync(fast)
+# Loading work.ibex_top_tracing(fast)
+# Loading work.prim_secded_pkg(fast)
+# Loading work.ibex_top(fast)
+# Loading work.prim_pkg(fast)
+# Loading work.prim_clock_gating(fast)
+# Loading work.prim_generic_clock_gating(fast)
+# Loading work.tc_clk_gating(fast)
+# Loading work.prim_buf(fast)
+# Loading work.prim_generic_buf(fast)
+# Loading work.prim_buf(fast__1)
+# Loading work.prim_generic_buf(fast__1)
+# Loading work.ibex_core(fast)
+# Loading work.ibex_if_stage(fast)
+# Loading work.ibex_prefetch_buffer(fast)
+# Loading work.ibex_fetch_fifo(fast)
+# Loading work.ibex_compressed_decoder(fast)
+# Loading work.ibex_id_stage(fast)
+# Loading work.ibex_decoder(fast)
+# Loading work.ibex_controller(fast)
+# Loading work.ibex_ex_block(fast)
+# Loading work.ibex_alu(fast)
+# Loading work.ibex_multdiv_fast(fast)
+# Loading work.ibex_load_store_unit(fast)
+# Loading work.ibex_wb_stage(fast)
+# Loading work.ibex_cs_registers(fast)
+# Loading work.ibex_csr(fast)
+# Loading work.ibex_csr(fast__1)
+# Loading work.ibex_csr(fast__2)
+# Loading work.ibex_csr(fast__3)
+# Loading work.ibex_csr(fast__4)
+# Loading work.ibex_csr(fast__5)
+# Loading work.ibex_csr(fast__6)
+# Loading work.ibex_counter(fast)
+# Loading work.ibex_counter(fast__1)
+# Loading work.ibex_csr(fast__7)
+# Loading work.ibex_register_file_ff(fast)
+# Loading work.ibex_tracer_pkg(fast)
+# Loading work.ibex_tracer(fast)
+# Loading work.obi_sram(fast__1)
+# Loading work.tc_sram(fast__1)
+# Loading work.jtag_dbg_wrapper_obi(fast)
+# Loading work.dmi_jtag(fast)
+# Loading work.dmi_jtag_tap(fast)
+# Loading work.tc_clk_inverter(fast)
+# Loading work.tc_clk_mux2(fast)
+# Loading work.dmi_cdc(fast)
+# Loading work.cdc_2phase_clearable(fast)
+# Loading work.cdc_2phase_src_clearable(fast)
+# Loading work.sync(fast)
+# Loading work.cdc_2phase_dst_clearable(fast)
+# Loading work.cdc_reset_ctrlr_pkg(fast)
+# Loading work.cdc_reset_ctrlr(fast)
+# Loading work.cdc_reset_ctrlr_half(fast)
+# Loading work.cdc_4phase_src(fast)
+# Loading work.sync(fast__1)
+# Loading work.cdc_4phase_dst(fast)
+# Loading work.cdc_2phase_clearable(fast__1)
+# Loading work.cdc_2phase_src_clearable(fast__1)
+# Loading work.cdc_2phase_dst_clearable(fast__1)
+# Loading work.dm_obi_top(fast)
+# Loading work.dm_top(fast)
+# Loading work.dm_csrs(fast)
+# Loading work.fifo_v2(fast)
+# Loading work.fifo_v3(fast__1)
+# Loading work.dm_sba(fast)
+# Loading work.dm_mem(fast)
+# Loading work.debug_rom(fast)
+# Loading work.peripherals_obi_to_apb(fast)
+# Loading work.obi_xbar_intf(fast__1)
+# Loading work.obi_xbar(fast__1)
+# Loading work.addr_decode(fast__1)
+# Loading work.addr_decode_dync(fast__1)
+# Loading work.obi_demux(fast__1)
+# Loading work.obi_mux(fast__1)
+# Loading work.rr_arb_tree(fast__1)
+# Loading work.sysctrl_obi_xbar(fast)
+# Loading work.obi_cut_intf(fast__2)
+# Loading work.obi_xbar_intf(fast__2)
+# Loading work.obi_xbar(fast__2)
+# Loading work.addr_decode(fast__2)
+# Loading work.addr_decode_dync(fast__2)
+# Loading work.obi_demux(fast__2)
+# Loading work.obi_mux(fast__2)
+# Loading work.rr_arb_tree(fast__2)
+# Loading work.lzc(fast__1)
+# Loading work.fifo_v3(fast__2)
+# Loading work.io_cell_frame_sysctrl(fast)
+# Loading work.io_cell_wrapper(fast)
+# Loading work.i_cell(fast)
+# Loading work.io_cell_wrapper(fast__1)
+# Loading work.o_cell(fast)
+# Loading work.io_cell_wrapper(fast__2)
+# Loading work.io_cell(fast)
+# Loading work.pmod_mux(fast)
+# Loading work.rstgen(fast)
+# Loading work.rstgen_bypass(fast)
+# Loading work.student_wrapper_0(fast)
+# Loading work.subsystem(fast)
+# Loading work.apb_interface(fast)
+# Loading work.buffer_controller(fast)
+# Loading work.activation_buffer(fast)
+# Loading work.weight_buffer(fast)
+# Loading work.systolic_array(fast)
+# Loading work.MAC_Unit(fast)
+# Loading work.output_buffer(fast)
+# Loading work.accelerator_control(fast)
+# Loading work.generic_and(fast)
+# Loading work.student_wrapper_1(fast)
+# Loading work.student_wrapper_2(fast)
+# Loading work.student_wrapper_3(fast)
+# Loading work.student_wrapper_4(fast)
+# Loading work.student_wrapper_5(fast)
+# Loading work.student_wrapper_6(fast)
+# Loading work.uart_tb_rx(fast)
+# Loading work.spi_slave(fast__1)
+# Loading work.OBI_BUS(fast__2)
+# Loading work.OBI_BUS(fast__3)
+# Loading work.apb_pkg(fast)
+# Loading work.APB(fast__1)
+# Loading work.OBI_BUS(fast__6)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_1/i_subsystem_0 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_0.v Line: 160
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'PSTRB'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(48).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_1/i_subsystem_0 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_0.v Line: 160
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_2/i_subsystem_1 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_1.v Line: 160
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'PSTRB'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(48).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_2/i_subsystem_1 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_1.v Line: 160
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_3/i_subsystem_2 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_2.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_4/i_subsystem_3 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_3.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_5/i_subsystem_4 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_4.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_6/i_subsystem_5 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_5.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_7/i_subsystem_6 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_6.v Line: 154
+# Compiling /tmp/ge87dix@linux12.clients.eikon.tum.de_dpi_633613/linux_x86_64_gcc-10.3.0/exportwrapper.c
+# Loading /tmp/ge87dix@linux12.clients.eikon.tum.de_dpi_633613/linux_x86_64_gcc-10.3.0/vsim_auto_compile.so
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$fsdbDumpvars' is not defined.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/tb/tb_didactic.sv Line: 138
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$fsdbDumpon' is not defined.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/tb/tb_didactic.sv Line: 139
+# run 0ms
+# [TB] TESTCASE overridden via plusarg: acc_test_seq
+# [TB] Time 0 ns - Reset on, start wait 10us
+# 
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/APB_DW
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/APB_AW
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/NUM_GPIO
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/PADDR
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/PENABLE
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/PSEL
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/PSTRB
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/PWDATA
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/PWRITE
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/PRDATA
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/PREADY
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/PSLVERR
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/clk_in
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/irq
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/pmod_gpi
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/pmod_gpio_oe
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/pmod_gpo
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/clk_en
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/irq_en
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/reset_n
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_APB_to_APB_PADDR
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_APB_to_APB_PENABLE
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_APB_to_APB_PRDATA
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_APB_to_APB_PREADY
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_APB_to_APB_PSEL
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_APB_to_APB_PSLVERR
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_APB_to_APB_PSTRB
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_APB_to_APB_PWDATA
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_APB_to_APB_PWRITE
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_pmod_gpio_to_pmod_gpio_gpi
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_pmod_gpio_to_pmod_gpio_gpio_oe
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_pmod_gpio_to_pmod_gpio_gpo
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_clk_gate_clk_i_to_Clock_clk
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_clk_gate_clk_o_to_i_subsystem_Clock_clk
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_reset_n_to_reset_n
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_clk_gate_en_to_clk_en
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_irq_to_irq_mask_b
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/irq_mask_a_to_irq_en
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_irq_en_to_irq_en
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/irq_mask_c_to_irq
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_clk_gate_clk_i
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_clk_gate_clk_o
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_clk_gate_en_i
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_PADDR
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_PENABLE
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_PRDATA
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_PREADY
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_PSEL
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_PSLVERR
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_PWDATA
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_PWRITE
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_clk
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_irq
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_irq_en
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_pmod_gpi
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_pmod_gpio_oe
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_pmod_gpo
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_reset_n
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/irq_mask_a
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/irq_mask_b
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/irq_mask_c
+add wave -position end  sim:/tb_didactic/i_didactic/student_wrapper_1/i_subsystem_PSTRB
+# Break key hit
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.riscv(fast)
+# Loading work.dm(fast)
+# Loading work.jtag_pkg(fast)
+# Loading work.tb_didactic(fast)
+# Loading work.Didactic(fast)
+# Loading work.analog_wrapper_0(fast)
+# Loading work.TOPCELL_ISAR_with_padframe(fast)
+# Loading work.cf_math_pkg(fast)
+# Loading work.obi_pkg(fast)
+# Loading work.obi_icn_ss(fast)
+# Loading work.obi_cut_intf(fast__1)
+# Loading work.obi_cut(fast)
+# Loading work.spill_register(fast)
+# Loading work.spill_register_flushable(fast)
+# Loading work.spill_register(fast__1)
+# Loading work.spill_register_flushable(fast__1)
+# Loading work.obi_cut_intf(fast)
+# Loading work.obi_xbar_intf(fast)
+# Loading work.obi_xbar(fast)
+# Loading work.addr_decode(fast)
+# Loading work.addr_decode_dync(fast)
+# Loading work.obi_demux(fast)
+# Loading work.delta_counter(fast)
+# Loading work.obi_mux(fast)
+# Loading work.rr_arb_tree(fast)
+# Loading work.lzc(fast)
+# Loading work.fifo_v3(fast)
+# Loading work.obi_to_apb_intf(fast)
+# Loading work.SysCtrl_SS_wrapper_0(fast)
+# Loading work.SysCtrl_SS_0(fast)
+# Loading work.apb_gpio(fast)
+# Loading work.apb_spi_master(fast)
+# Loading work.spi_master_apb_if(fast)
+# Loading work.spi_master_fifo(fast)
+# Loading work.spi_master_controller(fast)
+# Loading work.spi_master_clkgen(fast)
+# Loading work.spi_master_tx(fast)
+# Loading work.spi_master_rx(fast)
+# Loading work.apb_uart(fast)
+# Loading work.slib_input_sync(fast)
+# Loading work.slib_input_filter(fast)
+# Loading work.uart_interrupt(fast)
+# Loading work.slib_edge_detect(fast)
+# Loading work.uart_baudgen(fast)
+# Loading work.slib_clock_div(fast)
+# Loading work.slib_fifo(fast)
+# Loading work.slib_fifo(fast__1)
+# Loading work.uart_transmitter(fast)
+# Loading work.uart_receiver(fast)
+# Loading work.slib_counter(fast)
+# Loading work.slib_mv_filter(fast)
+# Loading work.slib_input_filter(fast__1)
+# Loading work.SS_Ctrl_reg_array(fast)
+# Loading work.obi_sram(fast)
+# Loading work.tc_sram(fast)
+# Loading work.prim_ram_1p_pkg(fast)
+# Loading work.ibex_pkg(fast)
+# Loading work.ibex_wrapper(fast)
+# Loading work.tech_sync(fast)
+# Loading work.ibex_top_tracing(fast)
+# Loading work.prim_secded_pkg(fast)
+# Loading work.ibex_top(fast)
+# Loading work.prim_pkg(fast)
+# Loading work.prim_clock_gating(fast)
+# Loading work.prim_generic_clock_gating(fast)
+# Loading work.tc_clk_gating(fast)
+# Loading work.prim_buf(fast)
+# Loading work.prim_generic_buf(fast)
+# Loading work.prim_buf(fast__1)
+# Loading work.prim_generic_buf(fast__1)
+# Loading work.ibex_core(fast)
+# Loading work.ibex_if_stage(fast)
+# Loading work.ibex_prefetch_buffer(fast)
+# Loading work.ibex_fetch_fifo(fast)
+# Loading work.ibex_compressed_decoder(fast)
+# Loading work.ibex_id_stage(fast)
+# Loading work.ibex_decoder(fast)
+# Loading work.ibex_controller(fast)
+# Loading work.ibex_ex_block(fast)
+# Loading work.ibex_alu(fast)
+# Loading work.ibex_multdiv_fast(fast)
+# Loading work.ibex_load_store_unit(fast)
+# Loading work.ibex_wb_stage(fast)
+# Loading work.ibex_cs_registers(fast)
+# Loading work.ibex_csr(fast)
+# Loading work.ibex_csr(fast__1)
+# Loading work.ibex_csr(fast__2)
+# Loading work.ibex_csr(fast__3)
+# Loading work.ibex_csr(fast__4)
+# Loading work.ibex_csr(fast__5)
+# Loading work.ibex_csr(fast__6)
+# Loading work.ibex_counter(fast)
+# Loading work.ibex_counter(fast__1)
+# Loading work.ibex_csr(fast__7)
+# Loading work.ibex_register_file_ff(fast)
+# Loading work.ibex_tracer_pkg(fast)
+# Loading work.ibex_tracer(fast)
+# Loading work.obi_sram(fast__1)
+# Loading work.tc_sram(fast__1)
+# Loading work.jtag_dbg_wrapper_obi(fast)
+# Loading work.dmi_jtag(fast)
+# Loading work.dmi_jtag_tap(fast)
+# Loading work.tc_clk_inverter(fast)
+# Loading work.tc_clk_mux2(fast)
+# Loading work.dmi_cdc(fast)
+# Loading work.cdc_2phase_clearable(fast)
+# Loading work.cdc_2phase_src_clearable(fast)
+# Loading work.sync(fast)
+# Loading work.cdc_2phase_dst_clearable(fast)
+# Loading work.cdc_reset_ctrlr_pkg(fast)
+# Loading work.cdc_reset_ctrlr(fast)
+# Loading work.cdc_reset_ctrlr_half(fast)
+# Loading work.cdc_4phase_src(fast)
+# Loading work.sync(fast__1)
+# Loading work.cdc_4phase_dst(fast)
+# Loading work.cdc_2phase_clearable(fast__1)
+# Loading work.cdc_2phase_src_clearable(fast__1)
+# Loading work.cdc_2phase_dst_clearable(fast__1)
+# Loading work.dm_obi_top(fast)
+# Loading work.dm_top(fast)
+# Loading work.dm_csrs(fast)
+# Loading work.fifo_v2(fast)
+# Loading work.fifo_v3(fast__1)
+# Loading work.dm_sba(fast)
+# Loading work.dm_mem(fast)
+# Loading work.debug_rom(fast)
+# Loading work.peripherals_obi_to_apb(fast)
+# Loading work.obi_xbar_intf(fast__1)
+# Loading work.obi_xbar(fast__1)
+# Loading work.addr_decode(fast__1)
+# Loading work.addr_decode_dync(fast__1)
+# Loading work.obi_demux(fast__1)
+# Loading work.obi_mux(fast__1)
+# Loading work.rr_arb_tree(fast__1)
+# Loading work.sysctrl_obi_xbar(fast)
+# Loading work.obi_cut_intf(fast__2)
+# Loading work.obi_xbar_intf(fast__2)
+# Loading work.obi_xbar(fast__2)
+# Loading work.addr_decode(fast__2)
+# Loading work.addr_decode_dync(fast__2)
+# Loading work.obi_demux(fast__2)
+# Loading work.obi_mux(fast__2)
+# Loading work.rr_arb_tree(fast__2)
+# Loading work.lzc(fast__1)
+# Loading work.fifo_v3(fast__2)
+# Loading work.io_cell_frame_sysctrl(fast)
+# Loading work.io_cell_wrapper(fast)
+# Loading work.i_cell(fast)
+# Loading work.io_cell_wrapper(fast__1)
+# Loading work.o_cell(fast)
+# Loading work.io_cell_wrapper(fast__2)
+# Loading work.io_cell(fast)
+# Loading work.pmod_mux(fast)
+# Loading work.rstgen(fast)
+# Loading work.rstgen_bypass(fast)
+# Loading work.student_wrapper_0(fast)
+# Loading work.subsystem(fast)
+# Loading work.apb_interface(fast)
+# Loading work.buffer_controller(fast)
+# Loading work.activation_buffer(fast)
+# Loading work.weight_buffer(fast)
+# Loading work.systolic_array(fast)
+# Loading work.MAC_Unit(fast)
+# Loading work.output_buffer(fast)
+# Loading work.accelerator_control(fast)
+# Loading work.generic_and(fast)
+# Loading work.student_wrapper_1(fast)
+# Loading work.student_wrapper_2(fast)
+# Loading work.student_wrapper_3(fast)
+# Loading work.student_wrapper_4(fast)
+# Loading work.student_wrapper_5(fast)
+# Loading work.student_wrapper_6(fast)
+# Loading work.uart_tb_rx(fast)
+# Loading work.spi_slave(fast__1)
+# Loading work.OBI_BUS(fast__2)
+# Loading work.OBI_BUS(fast__3)
+# Loading work.apb_pkg(fast)
+# Loading work.APB(fast__1)
+# Loading work.OBI_BUS(fast__6)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_1/i_subsystem_0 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_0.v Line: 160
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'PSTRB'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(48).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_1/i_subsystem_0 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_0.v Line: 160
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_2/i_subsystem_1 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_1.v Line: 160
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'PSTRB'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(48).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_2/i_subsystem_1 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_1.v Line: 160
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_3/i_subsystem_2 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_2.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_4/i_subsystem_3 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_3.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_5/i_subsystem_4 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_4.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_6/i_subsystem_5 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_5.v Line: 154
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (16) for port 'PADDR'. The port definition is at: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/subsystem.sv(43).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic/i_didactic/student_wrapper_7/i_subsystem_6 File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/generated/student_wrapper_6.v Line: 154
+# Loading /tmp/ge87dix@linux12.clients.eikon.tum.de_dpi_633613/linux_x86_64_gcc-10.3.0/vsim_auto_compile.so
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$fsdbDumpvars' is not defined.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/tb/tb_didactic.sv Line: 138
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$fsdbDumpon' is not defined.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_didactic File: /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/tb/tb_didactic.sv Line: 139
+run -all
+# [TB] TESTCASE overridden via plusarg: acc_test_seq
+# [TB] Time 0 ns - Reset on, start wait 10us
+# [TB] Time 10000 ns - Reset is about to be lifted
+# [TB] Time 10001 ns - Reset lift
+# tb_didactic.i_didactic.i_system_control.SysCtrl_SS.i_ibex_wrapper.Ibex_Core.u_ibex_tracer: Writing execution trace to trace_core_00000000.log
+# [TB] Time 20001 ns - execute for 10us
+# [JTAG] SoftReset Done(            20701337)
+# [JTAG] Bypass Test Passed (            48901337)
+# [JTAG] Tap ID: 1c0ffee1 (            54701337)
+# [JTAG] Tap ID Test PASSED (            54701337)
+# [test_mode_if]             56801337 - Init
+# [test_mode_if]             57901337 - Init dmi
+# [test_mode_if]             72501337 - set dmactive
+# [TB] Time 101701 ns - Halting the Core
+# [test_mode_if]            130901337 - wait for halt
+# [test_mode_if]            145501337 - is halt
+# [TB] Time 160101 ns - Writing the boot address into dpc
+# [JTAG] Loading L2 with debug module jtag interface
+# [JTAG] Loading L2 - Written 0880006f at 01000000 (           291501337)
+# [JTAG] Loading L2 - Written 0840006f at 01000004 (           320701337)
+# [JTAG] Loading L2 - Written 0800006f at 01000008 (           349901337)
+# [JTAG] Loading L2 - Written 07c0006f at 0100000c (           379101337)
+# [JTAG] Loading L2 - Written 0780006f at 01000010 (           408301337)
+# [JTAG] Loading L2 - Written 0740006f at 01000014 (           437501337)
+# [JTAG] Loading L2 - Written 0700006f at 01000018 (           466701337)
+# [JTAG] Loading L2 - Written 06c0006f at 0100001c (           495901337)
+# [JTAG] Loading L2 - Written 0680006f at 01000020 (           525101337)
+# [JTAG] Loading L2 - Written 0640006f at 01000024 (           554301337)
+# [JTAG] Loading L2 - Written 0600006f at 01000028 (           583501337)
+# [JTAG] Loading L2 - Written 05c0006f at 0100002c (           612701337)
+# [JTAG] Loading L2 - Written 0580006f at 01000030 (           641901337)
+# [JTAG] Loading L2 - Written 0540006f at 01000034 (           671101337)
+# [JTAG] Loading L2 - Written 0500006f at 01000038 (           700301337)
+# [JTAG] Loading L2 - Written 04c0006f at 0100003c (           729501337)
+# [JTAG] Loading L2 - Written 0480006f at 01000040 (           758701337)
+# [JTAG] Loading L2 - Written 0440006f at 01000044 (           787901337)
+# [JTAG] Loading L2 - Written 0400006f at 01000048 (           817101337)
+# [JTAG] Loading L2 - Written 03c0006f at 0100004c (           846301337)
+# [JTAG] Loading L2 - Written 0380006f at 01000050 (           875501337)
+# [JTAG] Loading L2 - Written 0340006f at 01000054 (           904701337)
+# [JTAG] Loading L2 - Written 0300006f at 01000058 (           933901337)
+# [JTAG] Loading L2 - Written 02c0006f at 0100005c (           963101337)
+# [JTAG] Loading L2 - Written 0280006f at 01000060 (           992301337)
+# [JTAG] Loading L2 - Written 0240006f at 01000064 (          1021501337)
+# [JTAG] Loading L2 - Written 0200006f at 01000068 (          1050701337)
+# [JTAG] Loading L2 - Written 01c0006f at 0100006c (          1079901337)
+# [JTAG] Loading L2 - Written 0180006f at 01000070 (          1109101337)
+# [JTAG] Loading L2 - Written 0140006f at 01000074 (          1138301337)
+# [JTAG] Loading L2 - Written 0100006f at 01000078 (          1167501337)
+# [JTAG] Loading L2 - Written 00c0006f at 0100007c (          1196701337)
+# [JTAG] Loading L2 - Written 3a40006f at 01000080 (          1225901337)
+# [JTAG] Loading L2 - Written 0000006f at 01000084 (          1255101337)
+# [JTAG] Loading L2 - Written 30200073 at 01000088 (          1284301337)
+# [JTAG] Loading L2 - Written c6221141 at 0100008c (          1313501337)
+# [JTAG] Loading L2 - Written 07b7c426 at 01000090 (          1342701337)
+# [JTAG] Loading L2 - Written 43890151 at 01000094 (          1371901337)
+# [JTAG] Loading L2 - Written 0077a023 at 01000098 (          1401101337)
+# [JTAG] Loading L2 - Written a0234f21 at 0100009c (          1430301337)
+# [JTAG] Loading L2 - Written 07b703e7 at 010000a0 (          1459501337)
+# [JTAG] Loading L2 - Written a2230151 at 010000a4 (          1488701337)
+# [JTAG] Loading L2 - Written 07b703e7 at 010000a8 (          1517901337)
+# [JTAG] Loading L2 - Written 03370151 at 010000ac (          1547101337)
+# [JTAG] Loading L2 - Written a4230151 at 010000b0 (          1576301337)
+# [JTAG] Loading L2 - Written 07b703e7 at 010000b4 (          1605501337)
+# [JTAG] Loading L2 - Written 8e2a0151 at 010000b8 (          1634701337)
+# [JTAG] Loading L2 - Written 00c30893 at 010000bc (          1663901337)
+# [JTAG] Loading L2 - Written 01030813 at 010000c0 (          1693101337)
+# [JTAG] Loading L2 - Written 03e7a623 at 010000c4 (          1722301337)
+# [JTAG] Loading L2 - Written 4e81937a at 010000c8 (          1751501337)
+# [JTAG] Loading L2 - Written 44914501 at 010000cc (          1780701337)
+# [JTAG] Loading L2 - Written 04134285 at 010000d0 (          1809901337)
+# [JTAG] Loading L2 - Written 86f60ff0 at 010000d4 (          1839101337)
+# [JTAG] Loading L2 - Written 8f934781 at 010000d8 (          1868301337)
+# [JTAG] Loading L2 - Written 0d63001e at 010000dc (          1897501337)
+# [JTAG] Loading L2 - Written 2023109e at 010000e0 (          1926701337)
+# [JTAG] Loading L2 - Written 873300b3 at 010000e4 (          1955901337)
+# [JTAG] Loading L2 - Written a02300ff at 010000e8 (          1985101337)
+# [JTAG] Loading L2 - Written 771300d8 at 010000ec (          2014301337)
+# [JTAG] Loading L2 - Written 20230ff7 at 010000f0 (          2043501337)
+# [JTAG] Loading L2 - Written 9d6300e8 at 010000f4 (          2072701337)
+# [JTAG] Loading L2 - Written 076302a7 at 010000f8 (          2101901337)
+# [JTAG] Loading L2 - Written 2023125e at 010000fc (          2131101337)
+# [JTAG] Loading L2 - Written a02300c3 at 01000100 (          2160301337)
+# [JTAG] Loading L2 - Written 026300d8 at 01000104 (          2189501337)
+# [JTAG] Loading L2 - Written 2023167e at 01000108 (          2218701337)
+# [JTAG] Loading L2 - Written 07850088 at 0100010c (          2247901337)
+# [JTAG] Loading L2 - Written 03e78963 at 01000110 (          2277101337)
+# [JTAG] Loading L2 - Written 00b32023 at 01000114 (          2306301337)
+# [JTAG] Loading L2 - Written 00fe86b3 at 01000118 (          2335501337)
+# [JTAG] Loading L2 - Written 00ff8733 at 0100011c (          2364701337)
+# [JTAG] Loading L2 - Written 00d8a023 at 01000120 (          2393901337)
+# [JTAG] Loading L2 - Written 0ff77713 at 01000124 (          2423101337)
+# [JTAG] Loading L2 - Written 00e82023 at 01000128 (          2452301337)
+# [JTAG] Loading L2 - Written fca787e3 at 0100012c (          2481501337)
+# [JTAG] Loading L2 - Written 00c32023 at 01000130 (          2510701337)
+# [JTAG] Loading L2 - Written 00d8a023 at 01000134 (          2539901337)
+# [JTAG] Loading L2 - Written 00082023 at 01000138 (          2569101337)
+# [JTAG] Loading L2 - Written 9be30785 at 0100013c (          2598301337)
+# [JTAG] Loading L2 - Written 0505fde7 at 01000140 (          2627501337)
+# [JTAG] Loading L2 - Written 18e30ea1 at 01000144 (          2656701337)
+# [JTAG] Loading L2 - Written 0637f9e5 at 01000148 (          2685901337)
+# [JTAG] Loading L2 - Written 4f850151 at 0100014c (          2715101337)
+# [JTAG] Loading L2 - Written 01f62023 at 01000150 (          2744301337)
+# [JTAG] Loading L2 - Written 0693425c at 01000154 (          2773501337)
+# [JTAG] Loading L2 - Written 8b910046 at 01000158 (          2802701337)
+# [JTAG] Loading L2 - Written 14079c63 at 0100015c (          2831901337)
+# [JTAG] Loading L2 - Written 0006af03 at 01000160 (          2861101337)
+# [JTAG] Loading L2 - Written 000f4737 at 01000164 (          2890301337)
+# [JTAG] Loading L2 - Written 24070713 at 01000168 (          2919501337)
+# [JTAG] Loading L2 - Written 002f7f13 at 0100016c (          2948701337)
+# [JTAG] Loading L2 - Written 000f0563 at 01000170 (          2977901337)
+# [JTAG] Loading L2 - Written 0a63a2a9 at 01000174 (          3007101337)
+# [JTAG] Loading L2 - Written 429c1207 at 01000178 (          3036301337)
+# [JTAG] Loading L2 - Written 8b89177d at 0100017c (          3065501337)
+# [JTAG] Loading L2 - Written 4f85dbfd at 01000180 (          3094701337)
+# [JTAG] Loading L2 - Written 45014625 at 01000184 (          3123901337)
+# [JTAG] Loading L2 - Written 01510837 at 01000188 (          3153101337)
+# [JTAG] Loading L2 - Written 015105b7 at 0100018c (          3182301337)
+# [JTAG] Loading L2 - Written 05e10851 at 01000190 (          3211501337)
+# [JTAG] Loading L2 - Written 43094885 at 01000194 (          3240701337)
+# [JTAG] Loading L2 - Written 42a14e8d at 01000198 (          3269901337)
+# [JTAG] Loading L2 - Written a829877e at 0100019c (          3299101337)
+# [JTAG] Loading L2 - Written 006e0563 at 010001a0 (          3328301337)
+# [JTAG] Loading L2 - Written 0f634685 at 010001a4 (          3357501337)
+# [JTAG] Loading L2 - Written 8f950fde at 010001a8 (          3386701337)
+# [JTAG] Loading L2 - Written 00f037b3 at 010001ac (          3415901337)
+# [JTAG] Loading L2 - Written 953e0705 at 010001b0 (          3445101337)
+# [JTAG] Loading L2 - Written 02e60363 at 010001b4 (          3474301337)
+# [JTAG] Loading L2 - Written fff70793 at 010001b8 (          3503501337)
+# [JTAG] Loading L2 - Written 00f82023 at 010001bc (          3532701337)
+# [JTAG] Loading L2 - Written 1693419c at 010001c0 (          3561901337)
+# [JTAG] Loading L2 - Written 1de30017 at 010001c4 (          3591101337)
+# [JTAG] Loading L2 - Written 86bafd1e at 010001c8 (          3620301337)
+# [JTAG] Loading L2 - Written 37b38f95 at 010001cc (          3649501337)
+# [JTAG] Loading L2 - Written 070500f0 at 010001d0 (          3678701337)
+# [JTAG] Loading L2 - Written 11e3953e at 010001d4 (          3707901337)
+# [JTAG] Loading L2 - Written 0f05fee6 at 010001d8 (          3737101337)
+# [JTAG] Loading L2 - Written 0fa10621 at 010001dc (          3766301337)
+# [JTAG] Loading L2 - Written fa5f1ee3 at 010001e0 (          3795501337)
+# [JTAG] Loading L2 - Written 015107b7 at 010001e4 (          3824701337)
+# [JTAG] Loading L2 - Written c3984709 at 010001e8 (          3853901337)
+# [JTAG] Loading L2 - Written 44a24432 at 010001ec (          3883101337)
+# [JTAG] Loading L2 - Written 80820141 at 010001f0 (          3912301337)
+# [JTAG] Loading L2 - Written 00fe86b3 at 010001f4 (          3941501337)
+# [JTAG] Loading L2 - Written 00b32023 at 010001f8 (          3970701337)
+# [JTAG] Loading L2 - Written 00d8a023 at 010001fc (          3999901337)
+# [JTAG] Loading L2 - Written 00582023 at 01000200 (          4029101337)
+# [JTAG] Loading L2 - Written 00c32023 at 01000204 (          4058301337)
+# [JTAG] Loading L2 - Written 40f50733 at 01000208 (          4087501337)
+# [JTAG] Loading L2 - Written 00d8a023 at 0100020c (          4116701337)
+# [JTAG] Loading L2 - Written 00173713 at 01000210 (          4145901337)
+# [JTAG] Loading L2 - Written 00e82023 at 01000214 (          4175101337)
+# [JTAG] Loading L2 - Written 9de30785 at 01000218 (          4204301337)
+# [JTAG] Loading L2 - Written 0505fde7 at 0100021c (          4233501337)
+# [JTAG] Loading L2 - Written 1ae30ea1 at 01000220 (          4262701337)
+# [JTAG] Loading L2 - Written b715ebe5 at 01000224 (          4291901337)
+# [JTAG] Loading L2 - Written 00c32023 at 01000228 (          4321101337)
+# [JTAG] Loading L2 - Written 00d8a023 at 0100022c (          4350301337)
+# [JTAG] Loading L2 - Written 87330785 at 01000230 (          4379501337)
+# [JTAG] Loading L2 - Written 202300ff at 01000234 (          4408701337)
+# [JTAG] Loading L2 - Written 86b30058 at 01000238 (          4437901337)
+# [JTAG] Loading L2 - Written 771301d7 at 0100023c (          4467101337)
+# [JTAG] Loading L2 - Written 80e30ff7 at 01000240 (          4496301337)
+# [JTAG] Loading L2 - Written 2023f1e7 at 01000244 (          4525501337)
+# [JTAG] Loading L2 - Written a02300b3 at 01000248 (          4554701337)
+# [JTAG] Loading L2 - Written 202300d8 at 0100024c (          4583901337)
+# [JTAG] Loading L2 - Written 8be300e8 at 01000250 (          4613101337)
+# [JTAG] Loading L2 - Written 2023fca7 at 01000254 (          4642301337)
+# [JTAG] Loading L2 - Written a02300c3 at 01000258 (          4671501337)
+# [JTAG] Loading L2 - Written 202300d8 at 0100025c (          4700701337)
+# [JTAG] Loading L2 - Written 07850008 at 01000260 (          4729901337)
+# [JTAG] Loading L2 - Written ebe798e3 at 01000264 (          4759101337)
+# [JTAG] Loading L2 - Written 0785bde9 at 01000268 (          4788301337)
+# [JTAG] Loading L2 - Written 00ff8733 at 0100026c (          4817501337)
+# [JTAG] Loading L2 - Written 01c82023 at 01000270 (          4846701337)
+# [JTAG] Loading L2 - Written 01d786b3 at 01000274 (          4875901337)
+# [JTAG] Loading L2 - Written 0ff77713 at 01000278 (          4905101337)
+# [JTAG] Loading L2 - Written ede783e3 at 0100027c (          4934301337)
+# [JTAG] Loading L2 - Written 00b32023 at 01000280 (          4963501337)
+# [JTAG] Loading L2 - Written 00d8a023 at 01000284 (          4992701337)
+# [JTAG] Loading L2 - Written 00e82023 at 01000288 (          5021901337)
+# [JTAG] Loading L2 - Written e6a789e3 at 0100028c (          5051101337)
+# [JTAG] Loading L2 - Written 00c32023 at 01000290 (          5080301337)
+# [JTAG] Loading L2 - Written 00d8a023 at 01000294 (          5109501337)
+# [JTAG] Loading L2 - Written 00082023 at 01000298 (          5138701337)
+# [JTAG] Loading L2 - Written 9be30785 at 0100029c (          5167901337)
+# [JTAG] Loading L2 - Written b545e7e7 at 010002a0 (          5197101337)
+# [JTAG] Loading L2 - Written 40e006b3 at 010002a4 (          5226301337)
+# [JTAG] Loading L2 - Written 4789b709 at 010002a8 (          5255501337)
+# [JTAG] Loading L2 - Written 064e0513 at 010002ac (          5284701337)
+# [JTAG] Loading L2 - Written bf2dc21c at 010002b0 (          5313901337)
+# [JTAG] Loading L2 - Written 05134789 at 010002b4 (          5343101337)
+# [JTAG] Loading L2 - Written c21c0c8e at 010002b8 (          5372301337)
+# [JTAG] Loading L2 - Written 4f01bf05 at 010002bc (          5401501337)
+# [JTAG] Loading L2 - Written 45014625 at 010002c0 (          5430701337)
+# [JTAG] Loading L2 - Written 07b7b5d1 at 010002c4 (          5459901337)
+# [JTAG] Loading L2 - Written 4bd40140 at 010002c8 (          5489101337)
+# [JTAG] Loading L2 - Written 47051141 at 010002cc (          5518301337)
+# [JTAG] Loading L2 - Written 46b2c636 at 010002d0 (          5547501337)
+# [JTAG] Loading L2 - Written 00a71733 at 010002d4 (          5576701337)
+# [JTAG] Loading L2 - Written 8ed9863e at 010002d8 (          5605901337)
+# [JTAG] Loading L2 - Written 43d4cbd4 at 010002dc (          5635101337)
+# [JTAG] Loading L2 - Written 97b34789 at 010002e0 (          5664301337)
+# [JTAG] Loading L2 - Written c63600a7 at 010002e4 (          5693501337)
+# [JTAG] Loading L2 - Written 8fcd45b2 at 010002e8 (          5722701337)
+# [JTAG] Loading L2 - Written 0017e793 at 010002ec (          5751901337)
+# [JTAG] Loading L2 - Written 4a1cc25c at 010002f0 (          5781101337)
+# [JTAG] Loading L2 - Written 47b2c63e at 010002f4 (          5810301337)
+# [JTAG] Loading L2 - Written ca188f5d at 010002f8 (          5839501337)
+# [JTAG] Loading L2 - Written 80820141 at 010002fc (          5868701337)
+# [JTAG] Loading L2 - Written 014006b7 at 01000300 (          5897901337)
+# [JTAG] Loading L2 - Written 11415698 at 01000304 (          5927101337)
+# [JTAG] Loading L2 - Written 013007b7 at 01000308 (          5956301337)
+# [JTAG] Loading L2 - Written 4632c63a at 0100030c (          5985501337)
+# [JTAG] Loading L2 - Written 47094585 at 01000310 (          6014701337)
+# [JTAG] Loading L2 - Written 00366613 at 01000314 (          6043901337)
+# [JTAG] Loading L2 - Written a423d690 at 01000318 (          6073101337)
+# [JTAG] Loading L2 - Written 069310b7 at 0100031c (          6102301337)
+# [JTAG] Loading L2 - Written a6230830 at 01000320 (          6131501337)
+# [JTAG] Loading L2 - Written 466d10d7 at 01000324 (          6160701337)
+# [JTAG] Loading L2 - Written 10c7a023 at 01000328 (          6189901337)
+# [JTAG] Loading L2 - Written a623460d at 0100032c (          6219101337)
+# [JTAG] Loading L2 - Written a22310c7 at 01000330 (          6248301337)
+# [JTAG] Loading L2 - Written a42310b7 at 01000334 (          6277501337)
+# [JTAG] Loading L2 - Written 014110e7 at 01000338 (          6306701337)
+# [JTAG] Loading L2 - Written 47838082 at 0100033c (          6335901337)
+# [JTAG] Loading L2 - Written cf850005 at 01000340 (          6365101337)
+# [JTAG] Loading L2 - Written 01300637 at 01000344 (          6394301337)
+# [JTAG] Loading L2 - Written 06931141 at 01000348 (          6423501337)
+# [JTAG] Loading L2 - Written 06130015 at 0100034c (          6452701337)
+# [JTAG] Loading L2 - Written 07131006 at 01000350 (          6481901337)
+# [JTAG] Loading L2 - Written c21c1f30 at 01000354 (          6511101337)
+# [JTAG] Loading L2 - Written 47b2c602 at 01000358 (          6540301337)
+# [JTAG] Loading L2 - Written 00f76963 at 0100035c (          6569501337)
+# [JTAG] Loading L2 - Written 47b20001 at 01000360 (          6598701337)
+# [JTAG] Loading L2 - Written c63e0785 at 01000364 (          6627901337)
+# [JTAG] Loading L2 - Written 7be347b2 at 01000368 (          6657101337)
+# [JTAG] Loading L2 - Written c783fef7 at 0100036c (          6686301337)
+# [JTAG] Loading L2 - Written 06850006 at 01000370 (          6715501337)
+# [JTAG] Loading L2 - Written 0141f3ed at 01000374 (          6744701337)
+# [JTAG] Loading L2 - Written 80828082 at 01000378 (          6773901337)
+# [JTAG] Loading L2 - Written 45051101 at 0100037c (          6803101337)
+# [JTAG] Loading L2 - Written cc22ce06 at 01000380 (          6832301337)
+# [JTAG] Loading L2 - Written 3781ca26 at 01000384 (          6861501337)
+# [JTAG] Loading L2 - Written 46093fa5 at 01000388 (          6890701337)
+# [JTAG] Loading L2 - Written 45054581 at 0100038c (          6919901337)
+# [JTAG] Loading L2 - Written 049339f5 at 01000390 (          6949101337)
+# [JTAG] Loading L2 - Written 842a0630 at 01000394 (          6978301337)
+# [JTAG] Loading L2 - Written 06a4c063 at 01000398 (          7007501337)
+# [JTAG] Loading L2 - Written 4585460d at 0100039c (          7036701337)
+# [JTAG] Loading L2 - Written c84a4509 at 010003a0 (          7065901337)
+# [JTAG] Loading L2 - Written 892a31e5 at 010003a4 (          7095101337)
+# [JTAG] Loading L2 - Written 02a4cb63 at 010003a8 (          7124301337)
+# [JTAG] Loading L2 - Written 45814609 at 010003ac (          7153501337)
+# [JTAG] Loading L2 - Written 39e9450d at 010003b0 (          7182701337)
+# [JTAG] Loading L2 - Written c863c62a at 010003b4 (          7211901337)
+# [JTAG] Loading L2 - Written 460d04a4 at 010003b8 (          7241101337)
+# [JTAG] Loading L2 - Written 45114585 at 010003bc (          7270301337)
+# [JTAG] Loading L2 - Written 47b231f1 at 010003c0 (          7299501337)
+# [JTAG] Loading L2 - Written 04a4c063 at 010003c4 (          7328701337)
+# [JTAG] Loading L2 - Written 943e944a at 010003c8 (          7357901337)
+# [JTAG] Loading L2 - Written e421942a at 010003cc (          7387101337)
+# [JTAG] Loading L2 - Written 01000537 at 010003d0 (          7416301337)
+# [JTAG] Loading L2 - Written 46450513 at 010003d4 (          7445501337)
+# [JTAG] Loading L2 - Written 4942379d at 010003d8 (          7474701337)
+# [JTAG] Loading L2 - Written 0537a801 at 010003dc (          7503901337)
+# [JTAG] Loading L2 - Written 05130100 at 010003e0 (          7533101337)
+# [JTAG] Loading L2 - Written 3fa14545 at 010003e4 (          7562301337)
+# [JTAG] Loading L2 - Written 4942844a at 010003e8 (          7591501337)
+# [JTAG] Loading L2 - Written 852240f2 at 010003ec (          7620701337)
+# [JTAG] Loading L2 - Written 44d24462 at 010003f0 (          7649901337)
+# [JTAG] Loading L2 - Written 80826105 at 010003f4 (          7679101337)
+# [JTAG] Loading L2 - Written 01000537 at 010003f8 (          7708301337)
+# [JTAG] Loading L2 - Written 45450513 at 010003fc (          7737501337)
+# [JTAG] Loading L2 - Written b7ed3f3d at 01000400 (          7766701337)
+# [JTAG] Loading L2 - Written 0537c62a at 01000404 (          7795901337)
+# [JTAG] Loading L2 - Written 05130100 at 01000408 (          7825101337)
+# [JTAG] Loading L2 - Written 3f054545 at 0100040c (          7854301337)
+# [JTAG] Loading L2 - Written 49424432 at 01000410 (          7883501337)
+# [JTAG] Loading L2 - Written 0537bfe1 at 01000414 (          7912701337)
+# [JTAG] Loading L2 - Written 05130100 at 01000418 (          7941901337)
+# [JTAG] Loading L2 - Written 37054745 at 0100041c (          7971101337)
+# [JTAG] Loading L2 - Written b7e94942 at 01000420 (          8000301337)
+# [JTAG] Loading L2 - Written 00100117 at 01000424 (          8029501337)
+# [JTAG] Loading L2 - Written 7dc10113 at 01000428 (          8058701337)
+# [JTAG] Loading L2 - Written 00000097 at 0100042c (          8087901337)
+# [JTAG] Loading L2 - Written 00c08093 at 01000430 (          8117101337)
+# [JTAG] Loading L2 - Written f49ff06f at 01000434 (          8146301337)
+# [JTAG] Loading L2 - Written 012002b7 at 01000438 (          8175501337)
+# [JTAG] Loading L2 - Written 38028293 at 0100043c (          8204701337)
+# [JTAG] Loading L2 - Written 80000337 at 01000440 (          8233901337)
+# [JTAG] Loading L2 - Written 00656533 at 01000444 (          8263101337)
+# [JTAG] Loading L2 - Written 00a2a023 at 01000448 (          8292301337)
+# [JTAG] Loading L2 - Written c39ff06f at 0100044c (          8321501337)
+# [JTAG] Loading L2 - Written 85828132 at 01000450 (          8350701337)
+# [JTAG] Loading L2 - Written 5f434341 at 01000454 (          8379901337)
+# [JTAG] Loading L2 - Written 5f514553 at 01000458 (          8409101337)
+# [JTAG] Loading L2 - Written 4f525245 at 0100045c (          8438301337)
+# [JTAG] Loading L2 - Written 000a0d52 at 01000460 (          8467501337)
+# [JTAG] Loading L2 - Written 5f434341 at 01000464 (          8496701337)
+# [JTAG] Loading L2 - Written 5f514553 at 01000468 (          8525901337)
+# [JTAG] Loading L2 - Written 53534150 at 0100046c (          8555101337)
+# [JTAG] Loading L2 - Written 00000a0d at 01000470 (          8584301337)
+# [JTAG] Loading L2 - Written 5f434341 at 01000474 (          8613501337)
+# [JTAG] Loading L2 - Written 5f514553 at 01000478 (          8642701337)
+# [JTAG] Loading L2 - Written 4c494146 at 0100047c (          8671901337)
+# [JTAG] Loading L2 - Written 000d0a00 at 01000480 (          8701101337)
+# [JTAG] Loading L2 with debug module jtag interface
+# [JTAG] Loading L2 - Written xxxxxxxx at 01100000 (          8847101337)
+# [test_mode_if]           8906601337 - Init dmi
+# [TB] Time 8906601 ns - Resuming the CORE
+# [test_mode_if]           8966101337 - Init dmi
+# [TB] Time 8995301 ns - Waiting for end of computation
+# RX string: ACC_SEQ_PASS
+#                                                                                                                                                                                                                                                    
+# [TB] Time 10158101 ns - JTAG RETURN OK: Received status core: 0x00000000
+# ** Note: $stop    : /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/tb/tb_didactic.sv(233)
+#    Time: 13158101337 ps  Iteration: 0  Instance: /tb_didactic
+# Break at /nas/ei/home/ge87dix/Edu4Chip/Didactic-SoC/src/tb/tb_didactic.sv line 233
+# End time: 23:45:53 on Jul 07,2026, Elapsed time: 0:03:01
+# Errors: 0, Warnings: 11

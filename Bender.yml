@@ -67,6 +67,8 @@ sources:
     files:
       - vendor_ips/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_xilinx_clock_gating.sv
       - src/tech_generic/io_cell_wrapper.sv
+      - src/tech_generic/analog_tieoff.v
+      - src/tech_generic/tech_sync.sv
 
   - target: didactic_obi
     files:

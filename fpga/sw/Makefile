@@ -5,11 +5,11 @@
 #   -Matti Käyrä (matti.kayra@tuni.fi)
 ###
 
-TESTCASE ?= blinky
+TESTCASE ?= acc_test_olpd
 START_TIME=`date +%F_%H:%M`
 SHELL = bash
 BUILD_DIR ?= ../../build/fpga
-CC=riscv32-unknown-elf-gcc
+CC=riscv64-unknown-elf-gcc
 CFLAGS=-mabi=ilp32 -O0 -g -ffunction-sections -fdata-sections -Icommon/
 ELF2HEX_BIN ?= riscv32-unknown-elf-elf2hex
 

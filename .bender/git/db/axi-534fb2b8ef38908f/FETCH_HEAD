@@ -1,5 +1,5 @@
 fc5479e4914865e26c1003f17bfedf5e05ce40c5	not-for-merge	branch 'aottaviano/dbg' of https://github.com/pulp-platform/axi
-1bb3780be68aa19b3e01c544f26bb4262744d9c4	not-for-merge	branch 'apb-converter' of https://github.com/pulp-platform/axi
+b8748f97d5149121da75e913b766134186d20c59	not-for-merge	branch 'apb-converter' of https://github.com/pulp-platform/axi
 818208bfe51505541a9227198c3afba9aa3e5668	not-for-merge	branch 'axi-pd-demo' of https://github.com/pulp-platform/axi
 b7d2b0b629dc2bf44789f7e993f757bfc7961b3f	not-for-merge	branch 'axi_llc' of https://github.com/pulp-platform/axi
 725ff7cb7fadeed49108d25612eb56743d4177a9	not-for-merge	branch 'axi_tlb' of https://github.com/pulp-platform/axi
@@ -35,7 +35,7 @@ b4bdd76df1047d1941c14f3fb8067c226df3a7a6	not-for-merge	branch 'nw/gw-tp' of http
 631f73a2b1afc4e4971d6ea92585e5a33f2e2c20	not-for-merge	branch 'remove-redundant-assertions' of https://github.com/pulp-platform/axi
 fc99baa90b4db75e28eb9ba395aadaf2aea71a4e	not-for-merge	branch 'remove-valid-ready-dep' of https://github.com/pulp-platform/axi
 cace0af7f565074a895d8dae3acc1c14baf0b4a9	not-for-merge	branch 'rt/ace' of https://github.com/pulp-platform/axi
-82ff192f53f452d1d505e1abf1731f358eb30e28	not-for-merge	branch 'rt/common-cells-v2' of https://github.com/pulp-platform/axi
+3c406ae59484238679c37a40afe149fbd0d08300	not-for-merge	branch 'rt/common-cells-v2' of https://github.com/pulp-platform/axi
 ff80b2727fba6ce59c3fb8e451b27290af450c06	not-for-merge	branch 'rt/decl-macros' of https://github.com/pulp-platform/axi
 68a2925c0f57e5796bc20712b99643676c672e5a	not-for-merge	branch 'sm/fix-sg-lint' of https://github.com/pulp-platform/axi
 43ba0dca0e3497c1021a163290af44e7fb809c1b	not-for-merge	branch 'type_naming' of https://github.com/pulp-platform/axi

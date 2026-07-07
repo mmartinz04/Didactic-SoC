@@ -101,6 +101,9 @@ module student_wrapper_1 #(
     assign PRDATA = i_subsystem_APB_to_APB_PRDATA;
     assign PREADY = i_subsystem_APB_to_APB_PREADY;
     assign i_subsystem_APB_to_APB_PSEL = PSEL;
+    
+    assign i_subsystem_APB_to_APB_PSTRB = PSTRB;
+    
     assign PSLVERR = i_subsystem_APB_to_APB_PSLVERR;
     assign i_subsystem_APB_to_APB_PWDATA = PWDATA;
     assign i_subsystem_APB_to_APB_PWRITE = PWRITE;
@@ -125,6 +128,9 @@ module student_wrapper_1 #(
     assign i_subsystem_APB_to_APB_PRDATA = i_subsystem_PRDATA;
     assign i_subsystem_APB_to_APB_PREADY = i_subsystem_PREADY;
     assign i_subsystem_PSEL = i_subsystem_APB_to_APB_PSEL;
+    
+    assign i_subsystem_PSTRB = i_subsystem_APB_to_APB_PSTRB;
+    
     assign i_subsystem_APB_to_APB_PSLVERR = i_subsystem_PSLVERR;
     assign i_subsystem_PWDATA = i_subsystem_APB_to_APB_PWDATA;
     assign i_subsystem_PWRITE = i_subsystem_APB_to_APB_PWRITE;
@@ -156,6 +162,7 @@ module student_wrapper_1 #(
         .PADDR               (i_subsystem_PADDR),
         .PENABLE             (i_subsystem_PENABLE),
         .PSEL                (i_subsystem_PSEL),
+        .PSTRB               (i_subsystem_PSTRB),
         .PWDATA              (i_subsystem_PWDATA),
         .PWRITE              (i_subsystem_PWRITE),
         .PRDATA              (i_subsystem_PRDATA),

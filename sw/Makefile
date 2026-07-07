@@ -7,7 +7,7 @@
 #   -Paul R. Genssler (paul.genssler@tum.de)
 ###
 
-TESTCASE ?= blink
+TESTCASE ?= acc_test_olpd
 START_TIME=`date +%F_%H:%M`
 SHELL = bash
 BUILD_DIR ?= ../build

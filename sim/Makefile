@@ -88,8 +88,8 @@ compile_didactic:
 	$(VLOG_OPTS) $(SIM_FLIST) -l $(BUILD_DIR)/logs/compile/$(START_TIME)_didactic.log
 
 SANITY_CHECK ?= 0
-TESTCASE ?= blink
-GUI ?= "-c"
+TESTCASE ?= acc_test_olpd
+GUI ?= "-gui"
 elaborate: library_mapping
 	cd $(BUILD_DIR)
 	vopt \

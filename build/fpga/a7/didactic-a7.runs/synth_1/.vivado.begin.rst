@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="ge87dix" Host="linux12.clients.eikon.tum.de" Pid="559770" HostCore="12" HostMemory="31971168">
+    </Process>
+</ProcessHandle>
