@@ -112,7 +112,7 @@ int main(void)
     int errors = 0;
 
     ss_init(ACCEL_SS);
-    uart_init();
+    uart_init(25000000, 9600);
 
     /*
      * Clear stale DONE/DIM_ERR from a previous run.

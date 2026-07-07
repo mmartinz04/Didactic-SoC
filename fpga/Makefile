@@ -8,10 +8,10 @@
 SHELL = bash
 VIVADO ?= vivado
 
-TEST ?= blinky
+TEST ?= hello
 
 export BUILD_DIR ?= ../build
-export PROJECT ?= z1
+export PROJECT ?= a7
 
 check_env:
 	mkdir -p $(BUILD_DIR)

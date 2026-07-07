@@ -39,8 +39,8 @@
 #define BUF_B1            3u
 
 /*
- * this is the physical RTL stride, not the logical matrix size.
- * The compiled tum_ss has default MAT_DIM = 8, so row/col addressing is:
+ * Important: this is the physical RTL stride, not the logical matrix size.
+ * Your compiled tum_ss has default MAT_DIM = 8, so row/col addressing is:
  *   addr = row * 8 + col
  */
 #define HW_MAT_DIM        8u
@@ -100,10 +100,6 @@ static int accel_wait_done(void)
     return 0;
 }
 
-static int8_t test_a_value(uint32_t row, uint32_t col)
-{
-    return (int8_t)((row * HW_MAT_DIM) + col + 1u);
-}
 
 int main(void)
 {
@@ -111,8 +107,19 @@ int main(void)
     uint32_t col;
     int errors = 0;
 
+    int8_t A[8][8] = {
+        {  1,  2,  3,  4,  5,  6,  7,  8 },
+        {  9, 10, 11, 12, 13, 14, 15, 16 },
+        { 17, 18, 19, 20, 21, 22, 23, 24 },
+        { 25, 26, 27, 28, 29, 30, 31, 32 },
+        { 33, 34, 35, 36, 37, 38, 39, 40 },
+        { 41, 42, 43, 44, 45, 46, 47, 48 },
+        { 49, 50, 51, 52, 53, 54, 55, 56 },
+        { 57, 58, 59, 60, 61, 62, 63, 64 }
+    };
+
     ss_init(ACCEL_SS);
-    uart_init();
+     uart_init(25000000,9600);
 
     /*
      * Clear stale DONE/DIM_ERR from a previous run.
@@ -127,42 +134,32 @@ int main(void)
 
     /*
      * Write A into A0 and identity matrix into B0.
-     *
-     * A[row][col] = row * 8 + col + 1
-     *
-     * This avoids a local initialized array, so the compiler
-     * should no longer generate a memcpy call.
+     * First accelerator run uses A0/B0/C0.
      */
-    for (row = 0; row < HW_MAT_DIM; row++) {
-        for (col = 0; col < HW_MAT_DIM; col++) {
-            accel_write_buffer(BUF_A0,
-                               row,
-                               col,
-                               test_a_value(row, col));
+    for (row = 0; row < 8; row++) {
+        for (col = 0; col < 8; col++) {
+            accel_write_buffer(BUF_A0, row, col, A[row][col]);
 
-            accel_write_buffer(BUF_B0,
-                               row,
-                               col,
-                               (row == col) ? 1 : 0);
+            if (row == col) {
+                accel_write_buffer(BUF_B0, row, col, 1);
+            } else {
+                accel_write_buffer(BUF_B0, row, col, 0);
+            }
         }
     }
 
     CONTROL = CONTROL_START;
 
     if (accel_wait_done() != 0) {
-        uart_print("ACC_TEST_2 TIMEOUT\n");
-        return 100;
+        return 100;  /* timeout */
     }
 
     /*
      * Verify C == A.
      */
-    for (row = 0; row < HW_MAT_DIM; row++) {
-        for (col = 0; col < HW_MAT_DIM; col++) {
-            int32_t result   = accel_read_result(row, col);
-            int32_t expected = (int32_t)test_a_value(row, col);
-
-            if (result != expected) {
+    for (row = 0; row < 8; row++) {
+        for (col = 0; col < 8; col++) {
+            if (accel_read_result(row, col) != (int32_t)A[row][col]) {
                 errors++;
             }
         }
