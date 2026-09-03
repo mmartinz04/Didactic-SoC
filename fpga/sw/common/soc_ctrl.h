@@ -14,7 +14,7 @@
 
 #include <stdint.h>
 
-#define CTRL_BASE 0x01040000
+#define CTRL_BASE 0x01400000
 
 //  note: 0x0 offset controls cpu fetch enable, it is used to disable cpu.
 #define RST_OFFSET      0x4

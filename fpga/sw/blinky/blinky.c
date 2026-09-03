@@ -13,7 +13,7 @@
 #include "soc_ctrl.h"
 #include "gpio.h"
 
-#define ADDR 0x01030000
+#define ADDR 0x01300000
 
 int main() {
 

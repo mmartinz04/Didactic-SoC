@@ -13,7 +13,7 @@
 
 #include <stdint.h>
 
-#define PERIPH_BASE 0x01030000
+#define PERIPH_BASE 0x01300000
 #define UART_OFFSET 0x100
 
 #define RBR_THR_DLL *( volatile uint32_t* )(PERIPH_BASE + UART_OFFSET + 0x00)

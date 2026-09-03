@@ -5,7 +5,7 @@
 #   -Matti Käyrä (matti.kayra@tuni.fi)
 ###
 
-TESTCASE ?= acc_test_olpd
+TESTCASE ?= hello
 START_TIME=`date +%F_%H:%M`
 SHELL = bash
 BUILD_DIR ?= ../../build/fpga

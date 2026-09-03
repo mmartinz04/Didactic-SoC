@@ -13,12 +13,12 @@
 
 #include <stdint.h>
 
-#define ADDR 0x01030000
+#define ADDR 0x01300000
 
 #define PAD_IN  *(uint32_t *)(ADDR+0x08)
 #define PAD_OUT *(uint32_t *)(ADDR+0x0C)
 
-#define CTRL_BASE 0x01040000
+#define CTRL_BASE 0x01400000
 #define PAD_CFG_GPIO0 *(uint32_t*)(CTRL_BASE + 0x4C)
 #define PAD_CFG_GPIO1 *(uint32_t*)(CTRL_BASE + 0x50)
 #define PAD_CFG_GPIO2 *(uint32_t*)(CTRL_BASE + 0x54)
