@@ -57,6 +57,13 @@ module apb_interface #(
     output reg                   PSLVERR,                                   //PSLVERR - Source: Completer = Accelerator -> TRANSFER ERROR: PSLVERR is an optional signal that can be asserted HIGH by the Completer to indicate an error condition on an APB transfer.
 
     //--------------------------------------------------
+    // PMOD GPIO Interface
+    //--------------------------------------------------
+    input  wire [15:0] pmod_gpi,
+    output reg  [15:0] pmod_gpo,
+    output reg  [15:0] pmod_gpio_oe,
+
+    //--------------------------------------------------
     // Control Unit Interface
     //--------------------------------------------------
     output reg                   start_cmd,
@@ -132,7 +139,15 @@ module apb_interface #(
     
     localparam REG_B_ROWS = 10'h028;
     localparam REG_B_COLS = 10'h02C;
+
+    //--------------------------------------------------
+    // PMOD GPIO Parameters
+    //--------------------------------------------------
     
+    localparam REG_PMOD_IN  = 10'h030;
+    localparam REG_PMOD_OUT = 10'h034;
+    localparam REG_PMOD_OE  = 10'h038;
+
     //--------------------------------------------------
     // Internal Registers
     //--------------------------------------------------
@@ -192,6 +207,9 @@ module apb_interface #(
 
             done_reg <= 0;
             dim_err  <= 0;
+
+            pmod_gpo     <= 16'd0;
+            pmod_gpio_oe <= 16'd0;
         end
         else begin
             //--------------------------------------------------
@@ -302,7 +320,20 @@ module apb_interface #(
                         REG_B_COLS: begin
                             b_cols <= PWDATA[4:0];
                         end
-        
+
+                        REG_PMOD_OUT: begin
+                            pmod_gpo <= PWDATA[15:0];
+                        end
+
+                        REG_PMOD_OE: begin
+                            pmod_gpio_oe <= PWDATA[15:0];
+                        end
+
+                        REG_PMOD_IN: begin
+                            // PMOD input register is read-only.
+                            PSLVERR <= 1'b1;
+                        end
+
                         default: begin
                             PSLVERR <= 1'b1;
                         end
@@ -370,6 +401,15 @@ module apb_interface #(
             
             REG_B_COLS:
                 PRDATA = {27'd0, b_cols};
+
+            REG_PMOD_IN:
+                PRDATA = {16'd0, pmod_gpi};
+
+            REG_PMOD_OUT:
+                PRDATA = {16'd0, pmod_gpo};
+
+            REG_PMOD_OE:
+                PRDATA = {16'd0, pmod_gpio_oe};
     
             default:
                 PRDATA = 32'd0;

@@ -85,11 +85,20 @@ module subsystem #(
 );
 
     //--------------------------------------------------
-    // Unused PMOD Outputs
+    // PMOD input synchronizer
     //--------------------------------------------------
+    reg [15:0] pmod_gpi_meta;
+    reg [15:0] pmod_gpi_sync;
 
-    assign pmod_gpo     = 16'd0;
-    assign pmod_gpio_oe = 16'd0;
+    always @(posedge clk or negedge reset_n) begin
+        if (!reset_n) begin
+            pmod_gpi_meta <= 16'd0;
+            pmod_gpi_sync <= 16'd0;
+        end else begin
+            pmod_gpi_meta <= pmod_gpi;
+            pmod_gpi_sync <= pmod_gpi_meta;
+        end
+    end
 
     //--------------------------------------------------
     // APB Interface Internal Signals
@@ -256,7 +265,11 @@ module subsystem #(
         .a_rows(a_rows),
         .a_cols(a_cols),
         .b_rows(b_rows),
-        .b_cols(b_cols)
+        .b_cols(b_cols),
+
+        .pmod_gpi(pmod_gpi_sync),
+        .pmod_gpo(pmod_gpo),
+        .pmod_gpio_oe(pmod_gpio_oe)
     );
 
     //--------------------------------------------------
