@@ -7,7 +7,7 @@
  *   SS index 1  -> APB base 0x01051000
  */
 #define ACCEL_SS          1u
-#define ACC_BASE          0x01051000u
+#define ACC_BASE          0x01510000u
 
 #define REG32(off)        (*(volatile uint32_t *)(ACC_BASE + (off)))
 
