@@ -75,7 +75,8 @@ module apb_interface #(
     // Interrupt source (v5)
     //--------------------------------------------------
     // Latched completion flag for level-style interrupt generation. Stays
-    // high until acknowledged (CONTROL bit 1) or a new run is started.
+    // high until acknowledged with CONTROL bit 1.
+    // While DONE is high, C0 belongs to software and cannot be overwritten by another calculation.
     output wire                  irq_pending,
 
     //--------------------------------------------------
@@ -170,7 +171,7 @@ module apb_interface #(
     // Status Register
     //--------------------------------------------------
     //   bit 0 = BUSY
-    //   bit 1 = DONE  (latched, cleared by START or by CONTROL[1] ack)
+    //   bit 1 = DONE  (latched, cleared only by CONTROL[1] ack)
     //   bit 2 = DIM_ERR (v5: last START rejected, a_cols != b_rows)
 
     always @(*) begin
@@ -269,18 +270,34 @@ module apb_interface #(
                                 dim_err  <= 1'b0;
                             end
 
-                            // CONTROL bit 0 = START. v5 dimension guard:
-                            // only launch if the inner dimensions match
-                            // (a_cols == b_rows); otherwise flag DIM_ERR
-                            // and do not start.
+                            // CONTROL bit 0 = START.
+                            //
+                            // A launch is permitted only when:
+                            //   1. the accelerator is not already busy, and
+                            //   2. no previous result is pending,
+                            //      OR software acknowledges that result in this same write.
+                            //
+                            // This protects the single C0 output buffer from being overwritten
+                            // before software has released the previous result.
                             if (PWDATA[0]) begin
-                                if (a_cols == b_rows) begin
-                                    start_cmd <= 1'b1;
-                                    done_reg  <= 1'b0;
-                                    dim_err   <= 1'b0;
+                                if (!busy && (!done_reg || PWDATA[1])) begin
+
+                                    if (a_cols == b_rows) begin
+                                        start_cmd <= 1'b1;
+                                        done_reg  <= 1'b0;
+                                        dim_err   <= 1'b0;
+                                    end
+                                    else begin
+                                        start_cmd <= 1'b0;
+                                        dim_err   <= 1'b1;
+                                    end
+
                                 end
                                 else begin
-                                    dim_err   <= 1'b1;
+                                    // START rejected because the accelerator is busy or C0
+                                    // still contains an unacknowledged result.
+                                    start_cmd      <= 1'b0;
+                                    control_reg[0] <= 1'b0;
                                 end
                             end
                         end

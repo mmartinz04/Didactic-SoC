@@ -281,9 +281,9 @@ int main(void)
      * Run order follows accelerator_control active_buf toggling:
      *
      *   Run 1: active_buf = 0 -> A0/B0/C0, A * I = A
-     *   Run 2: active_buf = 1 -> A1/B1/C1, A * 2I = 2A
+     *   Run 2: active_buf = 1 -> A1/B1/C0, A * 2I = 2A
      *   Run 3: active_buf = 0 -> A0/B0/C0, A * -I = -A
-     *   Run 4: active_buf = 1 -> A1/B1/C1, ones * I = ones
+     *   Run 4: active_buf = 1 -> A1/B1/C0, ones * I = ones
      */
 
     run_result = run_one_test(1u, BUF_A0, BUF_B0);

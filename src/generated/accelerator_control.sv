@@ -17,7 +17,8 @@
 //   - While one buffer set is used for computation, software may write to the
 //     other buffer set.
 //   - active_buf = 0 means compute using A0, B0, C0.
-//   - active_buf = 1 means compute using A1, B1, C1.
+//   - active_buf = 1 means compute using A1, B1, C0.
+//   -> All computations store their result in a single C0 output buffer
 //
 // Notes:
 //   - This module does not contain APB logic.
@@ -53,7 +54,6 @@ module accelerator_control #(
     input  wire a1_stream_done,
 
     input  wire c0_store_done,
-    input  wire c1_store_done,
 
     //--------------------------------------------------
     // Activation Buffer Control
@@ -74,13 +74,11 @@ module accelerator_control #(
     // Output Buffer Control
     //--------------------------------------------------
     output reg  c0_store_enable,
-    output reg  c1_store_enable,
 
     //--------------------------------------------------
     // Active Buffer Indicator
     //--------------------------------------------------
-    output reg  active_buf,
-    output reg last_result_buf
+    output reg  active_buf
 );
 
     //--------------------------------------------------
@@ -94,17 +92,6 @@ module accelerator_control #(
 
     reg [1:0] state_reg;
     reg [1:0] state_next;
-
-    //--------------------------------------------------
-    // Selected Done Signal
-    //--------------------------------------------------
-    // Completion is driven by the active output buffer's store_done.
-    // (v5: the per-run a_done_seen / c_done_seen latches were removed -
-    //  they were written but never read, so they affected nothing.)
-
-    wire selected_c_store_done;
-
-    assign selected_c_store_done = (active_buf == 1'b0) ? c0_store_done : c1_store_done;
 
     //--------------------------------------------------
     // Next-State Logic
@@ -125,7 +112,7 @@ module accelerator_control #(
             end
 
             S_COMPUTE: begin
-                if (selected_c_store_done)
+                if (c0_store_done)
                     state_next = S_DONE;
             end
 
@@ -148,13 +135,11 @@ module accelerator_control #(
         if (!reset_int) begin
             state_reg       <= S_IDLE;
             active_buf      <= 1'b0;
-            last_result_buf <= 1'b0;
         end
         else begin
             state_reg <= state_next;
 
             if (state_reg == S_DONE) begin
-                last_result_buf <= active_buf;
                 active_buf      <= ~active_buf;
             end
         end
@@ -183,7 +168,6 @@ module accelerator_control #(
         b1_output_enable = 1'b0;
 
         c0_store_enable = 1'b0;
-        c1_store_enable = 1'b0;
 
         //--------------------------------------------------
         // State-dependent outputs
@@ -197,34 +181,32 @@ module accelerator_control #(
             end
 
             S_START: begin
-                busy = 1'b1;
+                busy            = 1'b1;
+                c0_store_enable = 1'b1;
 
                 if (active_buf == 1'b0) begin
                     a0_stream_start  = 1'b1;
                     a0_stream_en     = 1'b1;
                     b0_output_enable = 1'b1;
-                    c0_store_enable  = 1'b1;
                 end
                 else begin
                     a1_stream_start  = 1'b1;
                     a1_stream_en     = 1'b1;
                     b1_output_enable = 1'b1;
-                    c1_store_enable  = 1'b1;
                 end
             end
 
             S_COMPUTE: begin
-                busy = 1'b1;
+                busy            = 1'b1;
+                c0_store_enable = 1'b1;
 
                 if (active_buf == 1'b0) begin
                     a0_stream_en     = 1'b1;
                     b0_output_enable = 1'b1;
-                    c0_store_enable  = 1'b1;
                 end
                 else begin
                     a1_stream_en     = 1'b1;
                     b1_output_enable = 1'b1;
-                    c1_store_enable  = 1'b1;
                 end
             end
 

@@ -22,10 +22,6 @@
 //   - active_buf = 1:
 //       compute using A1, B1, C1
 //
-// Result readback:
-//   - last_result_buf tells which output buffer contains the most recent result.
-//   - The APB interface reads from C0 or C1 depending on last_result_buf.
-//
 //////////////////////////////////////////////////////////////////////////////////
 
 module subsystem #(
@@ -200,10 +196,8 @@ module subsystem #(
     //--------------------------------------------------
 
     wire signed [DATA_W_C-1:0] c0_read_data;
-    wire signed [DATA_W_C-1:0] c1_read_data;
 
     wire c0_store_done;
-    wire c1_store_done;
 
     //--------------------------------------------------
     // Control Signals
@@ -219,10 +213,8 @@ module subsystem #(
     wire b1_output_enable;
 
     wire c0_store_enable;
-    wire c1_store_enable;
 
     wire active_buf;
-    wire last_result_buf;
 
     //--------------------------------------------------
     // APB Interface
@@ -477,37 +469,10 @@ module subsystem #(
     );
 
     //--------------------------------------------------
-    // Output Buffer C1
+    // Result Readback
     //--------------------------------------------------
 
-    output_buffer #(
-        .MAT_DIM(MAT_DIM),
-        .DATA_W(DATA_W_C),
-        .ADDR_W(ADDR_W)
-    ) u_output_buffer_c1 (
-        .clk_in(clk),
-        .reset_int(reset_n),
-
-        .c_in(c_out),
-        .c_valid(c_valid),
-
-        .c_rows(c_rows),
-        .c_cols(c_cols),
-
-        .store_enable(c1_store_enable),
-
-        .read_addr(result_addr),
-        .read_data(c1_read_data),
-
-        .store_done(c1_store_done)
-    );
-
-    //--------------------------------------------------
-    // Result Readback Mux
-    //--------------------------------------------------
-
-    assign result_data =
-        (last_result_buf == 1'b0) ? c0_read_data : c1_read_data;
+    assign result_data = c0_read_data;
 
     //--------------------------------------------------
     // Accelerator Control Unit
@@ -528,7 +493,6 @@ module subsystem #(
         .a1_stream_done(a1_stream_done),
 
         .c0_store_done(c0_store_done),
-        .c1_store_done(c1_store_done),
 
         .a0_stream_start(a0_stream_start),
         .a1_stream_start(a1_stream_start),
@@ -540,22 +504,12 @@ module subsystem #(
         .b1_output_enable(b1_output_enable),
 
         .c0_store_enable(c0_store_enable),
-        .c1_store_enable(c1_store_enable),
 
-        .active_buf(active_buf),
-        .last_result_buf(last_result_buf)
+        .active_buf(active_buf)
     );
 
-    //--------------------------------------------------
-    // IRQ
-    //--------------------------------------------------
-    //
-    // v5: level-style interrupt. irq_pending is the latched completion flag
-    // (held until the SoC acknowledges via CONTROL[1] or starts a new run),
-    // so the 1-cycle done pulse can no longer be missed by the interrupt
-    // controller. Gated by the SoC enable irq_en_4.
-    //
-    //--------------------------------------------------
+    // v5: level-style interrupt. irq_pending is the latched completion flag and remains high until software acknowledges it with CONTROL[1].
+    // A new START is rejected while a result is pending unless ACK is asserted in the same CONTROL write.
 
     assign irq = irq_pending & irq_en;
 
